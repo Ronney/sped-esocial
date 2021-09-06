@@ -74,55 +74,7 @@
                     "required": false,
                     "type": "string",
                     "maxLength": 255
-                },
-                "infoatestado": {
-                    "required": false,
-                    "type": "array",
-                    "minItems": 0,
-                    "maxItems": 9,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "codcid": {
-                                "required": false,
-                                "type": "string",
-                                "maxLength": 4
-                            },
-                            "qtddiasafast": {
-                                "required": true,
-                                "type": "integer",
-                                "maxLength": 3
-                            },
-                            "emitente": {
-                                "required": false,
-                                "type": "object",
-                                "properties": {
-                                    "nmemit": {
-                                        "required": true,
-                                        "type": "string",
-                                        "maxLength": 70
-                                    },
-                                    "ideoc": {
-                                        "required": true,
-                                        "type": "integer",
-                                        "minumum": 1,
-                                        "maximum": 3
-                                    },
-                                    "nroc": {
-                                        "required": true,
-                                        "type": "string",
-                                        "pattern": "^.{2,14}$"
-                                    },
-                                    "ufoc": {
-                                        "required": false,
-                                        "type": "string",
-                                        "pattern": "^.{2}$"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
+                },                
                 "infocessao": {
                     "required": false,
                     "type": "object",
