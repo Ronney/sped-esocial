@@ -17,9 +17,8 @@ use JsonSchema\Validator;
 //Campo {racaCor} – alterada descrição dos valores [2, 3, 4]. ok
 //Campo {dtChegada} – alterada ocorrência e inserida validação. ok
 //Campo {dtTerm} – alterada validação.ok
-
 $evento  = 'evtAdmissao';
-$version = '02_05_00';
+$version = 'S_01_00_00';
 
 $jsonSchema = '{
     "title": "evtAdmissao",
@@ -43,11 +42,6 @@ $jsonSchema = '{
             "maxLength": 40
         },
         "cpftrab": {
-            "required": true,
-            "type": "string",
-            "pattern": "^[0-9]{11}"
-        },
-        "nistrab": {
             "required": true,
             "type": "string",
             "pattern": "^[0-9]{11}"
@@ -81,11 +75,6 @@ $jsonSchema = '{
             "maxLength": 2,
             "pattern": "^(01|02|03|04|05|06|07|08|09|10|11|12)$"
         },
-        "indpriempr": {
-            "required": true,
-            "type": "string",
-            "pattern": "S|N"
-        },
         "nmsoc": {
             "required": false,
             "type": ["string","null"],
@@ -95,16 +84,6 @@ $jsonSchema = '{
             "required": true,
             "type": "string",
             "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
-        },
-        "codmunic": {
-            "required": false,
-            "type": ["string","null"],
-            "maxLength": 7
-        },
-        "uf": {
-            "required": false,
-            "type": ["string","null"],
-            "maxLength": 2
         },
         "paisnascto": {
             "required": true,
@@ -129,153 +108,6 @@ $jsonSchema = '{
             "required": false,
             "type": ["string","null"],
             "maxLength": 70
-        },
-        "ctps": {
-            "required": false,
-            "type": ["object","null"],
-            "properties": {
-                "nrctps": {
-                    "required": true,
-                    "type": "string",
-                    "maxLength": 11
-                },
-                "seriectps": {
-                    "required": true,
-                    "type": "string",
-                    "maxLength": 5
-                },
-                "ufctps": {
-                    "required": true,
-                    "type": "string",
-                    "maxLength": 2
-                }
-            }
-        },
-        "nrric": {
-            "required": false,
-            "type": ["object","null"],
-            "properties": {
-                "nrric": {
-                    "required": true,
-                    "type": "string",
-                    "maxLength": 14
-                },
-                "orgaoemissor": {
-                    "required": true,
-                    "type": "string",
-                    "maxLength": 20
-                },
-                "dtexped": {
-                    "required": false,
-                    "type": ["string","null"],
-                    "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
-                }
-            }
-        },
-        "rg": {
-            "required": false,
-            "type": ["object","null"],
-            "properties": {
-                "nrrg": {
-                    "required": true,
-                    "type": "string",
-                    "pattern": "^[0-9]{6,14}$"
-                },
-                "orgaoemissor": {
-                    "required": true,
-                    "type": "string",
-                    "maxLength": 20
-                },
-                "dtexped": {
-                    "required": false,
-                    "type": ["string","null"],
-                    "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
-                }
-            }
-        },
-        "rne": {
-            "required": false,
-            "type": ["object","null"],
-            "properties": {
-                "nrrne": {
-                    "required": true,
-                    "type": "string",
-                    "maxLength": 14
-                },
-                "orgaoemissor": {
-                    "required": true,
-                    "type": "string",
-                    "maxLength": 20
-                },
-                "dtexped": {
-                    "required": false,
-                    "type": ["string","null"],
-                    "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
-                }
-            }
-        },
-        "oc": {
-            "required": false,
-            "type": ["object","null"],
-            "properties": {
-                "nroc": {
-                    "required": true,
-                    "type": "string",
-                    "maxLength": 14
-                },
-                "orgaoemissor": {
-                    "required": true,
-                    "type": "string",
-                    "maxLength": 20
-                },
-                "dtexped": {
-                    "required": false,
-                    "type": ["string","null"],
-                    "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
-                },
-                "dtvalid": {
-                    "required": false,
-                    "type": ["string","null"],
-                    "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
-                }
-            }
-        },
-        "cnh": {
-            "required": false,
-            "type": ["object","null"],
-            "properties": {
-                "nrregcnh": {
-                    "required": true,
-                    "type": "string",
-                    "maxLength": 12
-                },
-                "dtexped": {
-                    "required": false,
-                    "type": ["string","null"],
-                    "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
-                },
-                "ufcnh": {
-                    "required": true,
-                    "type": "string",
-                    "maxLength": 2
-                },
-                "dtvalid": {
-                    "required": true,
-                    "type": "string",
-                    "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
-                },
-                "dtprihab": {
-                    "required": true,
-                    "type": "string",
-                    "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
-                },
-               "categoriacnh": {
-                    "required": true,
-                    "type": "string",
-                    "minLength": 1,
-                    "maxLength": 2
-                }
-            }
         },
         "endereco": {
             "required": true,
@@ -472,6 +304,11 @@ $jsonSchema = '{
                         "maxLength": 11,
                         "minLength": 11
                     },
+                    "sexodep": {
+                        "required": false,
+                        "type": ["string","null"],
+                        "maxLength": 1
+                    },
                     "depirrf": {
                         "required": true,
                         "type": "string",
@@ -510,17 +347,7 @@ $jsonSchema = '{
                     "type": ["string","null"],
                     "maxLength": 13
                 },
-                "fonealternat": {
-                    "required": false,
-                    "type": ["string","null"],
-                    "maxLength": 13
-                },
                 "emailprinc": {
-                    "required": false,
-                    "type": ["string","null"],
-                    "maxLength": 60
-                },
-                "emailalternat": {
                     "required": false,
                     "type": ["string","null"],
                     "maxLength": 60

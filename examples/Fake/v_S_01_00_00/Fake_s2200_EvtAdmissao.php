@@ -38,7 +38,6 @@ $std->sexo = 'M';
 $std->racacor = 5;
 $std->estciv = 1;
 $std->grauinstr = '07';
-$std->indpriempr = 'N';
 $std->nmsoc = 'Chiquinho';
 $std->dtnascto = '1980-01-01';
 $std->paisnascto = '105'; // 105 = Brasil
