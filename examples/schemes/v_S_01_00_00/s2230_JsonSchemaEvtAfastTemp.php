@@ -18,7 +18,7 @@ use JsonSchema\Validator;
 //S-2230 sem alterações significativas de 02_04_02 para 02_05_00
 
 $evento = 'evtAfastTemp';
-$version = '02_05_00';
+$version = 'S_01_00_00';
 
 $jsonSchema = '{
     "title": "evtAfastTemp",
@@ -46,11 +46,6 @@ $jsonSchema = '{
             "type": "object",
             "properties": {
                 "cpftrab": {
-                    "required": true,
-                    "type": "string",
-                    "pattern": "^[0-9]{11}$"
-                },
-                "nistrab": {
                     "required": true,
                     "type": "string",
                     "pattern": "^[0-9]{11}$"
@@ -97,54 +92,22 @@ $jsonSchema = '{
                     "type": "string",
                     "maxLength": 255
                 },
-                "infoatestado": {
+                "infoperiodoaquisitivo": {
                     "required": false,
-                    "type": "array",
-                    "minItems": 0,
-                    "maxItems": 9,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "codcid": {
-                                "required": false,
-                                "type": "string",
-                                "maxLength": 4
-                            },
-                            "qtddiasafast": {
-                                "required": true,
-                                "type": "integer",
-                                "maxLength": 3
-                            },
-                            "emitente": {
-                                "required": false,
-                                "type": "object",
-                                "properties": {
-                                    "nmemit": {
-                                        "required": true,
-                                        "type": "string",
-                                        "maxLength": 70
-                                    },
-                                    "ideoc": {
-                                        "required": true,
-                                        "type": "integer",
-                                        "minumum": 1,
-                                        "maximum": 3
-                                    },
-                                    "nroc": {
-                                        "required": true,
-                                        "type": "string",
-                                        "pattern": "^.{2,14}$"
-                                    },
-                                    "ufoc": {
-                                        "required": false,
-                                        "type": "string",
-                                        "pattern": "^.{2}$"
-                                    }
-                                }
-                            }
+                    "type": "object",
+                    "properties": {
+                        "dtinicio": {
+                            "required": true,
+                            "type": "string",
+                            "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
+                        },
+                        "dtfim": {
+                            "required": true,
+                            "type": "string",
+                            "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
                         }
                     }
-                },
+                }
                 "infocessao": {
                     "required": false,
                     "type": "object",
@@ -176,6 +139,22 @@ $jsonSchema = '{
                             "type": "integer",
                             "minumum": 1,
                             "maximum": 3
+                        }
+                    }
+                },
+                "infomandelet": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                        "cnpjmandelet": {
+                            "required": true,
+                            "type": "string",
+                            "pattern": "^[0-9]{14}$"
+                        },
+                        "indremunencargo": {
+                            "required": true,
+                            "type": "string",
+                            "maxLength": 1
                         }
                     }
                 }
