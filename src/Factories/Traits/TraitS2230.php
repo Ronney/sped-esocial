@@ -227,8 +227,6 @@ trait TraitS2230
      */
     protected function toNodeS100()
     {
-        //throw new \Exception("TODO !!");
-        //Ajuste para o novo layout
         
         $ideEmpregador = $this->node->getElementsByTagName('ideEmpregador')->item(0);
         //o idEvento pode variar de evento para evento
@@ -271,13 +269,7 @@ trait TraitS2230
             "cpfTrab",
             $this->std->idevinculo->cpftrab,
             true
-        );
-        $this->dom->addChild(
-            $ideVinculo,
-            "nisTrab",
-            $this->std->idevinculo->nistrab,
-            true
-        );
+        );        
         $this->dom->addChild(
             $ideVinculo,
             "matricula",
@@ -323,7 +315,23 @@ trait TraitS2230
                 "observacao",
                 ! empty($this->std->iniafastamento->observacao) ? $this->std->iniafastamento->observacao : null,
                 false
-            );      
+            );
+            if (! empty($this->std->infoperiodoaquisitivo)) {
+                $infoPeriodoAquisitivo = $this->dom->createElement("perAquis");
+                $this->dom->addChild(
+                    $infoPeriodoAquisitivo,
+                    "dtInicio",
+                    $this->std->infoperiodoaquisitivo->dtinicio,
+                    true
+                );
+                $this->dom->addChild(
+                    $infoPeriodoAquisitivo,
+                    "dtFim",
+                    $this->std->infoperiodoaquisitivo->dtfim,
+                    true
+                );
+                $iniAfastamento->appendChild($infoPeriodoAquisitivo);
+            }      
             if (! empty($this->std->infocessao)) {
                 $infoCessao = $this->dom->createElement("infoCessao");
                 $this->dom->addChild(
@@ -355,6 +363,22 @@ trait TraitS2230
                     true
                 );
                 $iniAfastamento->appendChild($infoMandSind);
+            }
+            if (! empty($this->std->infomandelet)) {
+                $infoMandElet = $this->dom->createElement("infoMandElet");
+                $this->dom->addChild(
+                    $infoMandElet,
+                    "cnpjMandElet",
+                    $this->std->infomandelet->cnpjmandelet,
+                    true
+                );
+                $this->dom->addChild(
+                    $infoMandElet,
+                    "indRemunCargo",
+                    $this->std->infomandelet->indremuncargo,
+                    true
+                );
+                $iniAfastamento->appendChild($infoMandElet);
             }
             $infoAfastamento->appendChild($iniAfastamento);
         }

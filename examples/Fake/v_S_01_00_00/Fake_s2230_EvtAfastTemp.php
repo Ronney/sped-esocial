@@ -59,7 +59,7 @@ $std->iniafastamento->infomandsind->infonusremun = 1;
 
 $std->iniafastamento->infomandelet = new \stdClass();
 $std->iniafastamento->infomandelet->cnpjmandelet = '11111111111111';
-$std->iniafastamento->infomandelet->indremunencargo = 'N';
+$std->iniafastamento->infomandelet->indremuncargo = 'N';
 
 //Opcional 2
 $std->inforetif = new \stdClass();

@@ -151,7 +151,7 @@ $jsonSchema = '{
                             "type": "string",
                             "pattern": "^[0-9]{14}$"
                         },
-                        "indremunencargo": {
+                        "indremuncargo": {
                             "required": true,
                             "type": "string",
                             "maxLength": 1
