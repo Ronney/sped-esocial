@@ -388,13 +388,13 @@ trait TraitS2230
                 $infoRetif,
                 "origRetif",
                 $this->std->inforetif->origretif,
-                true
+                false
             );
             $this->dom->addChild(
                 $infoRetif,
                 "tpProc",
                 $this->std->inforetif->tpproc,
-                true
+                false
             );
             $this->dom->addChild(
                 $infoRetif,
