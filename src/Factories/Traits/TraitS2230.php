@@ -316,22 +316,22 @@ trait TraitS2230
                 ! empty($this->std->iniafastamento->observacao) ? $this->std->iniafastamento->observacao : null,
                 false
             );
-            if (! empty($this->std->infoperiodoaquisitivo)) {
+            if (! empty($this->std->iniafastamento->infoperiodoaquisitivo)) {
                 $infoPeriodoAquisitivo = $this->dom->createElement("perAquis");
                 $this->dom->addChild(
                     $infoPeriodoAquisitivo,
                     "dtInicio",
-                    $this->std->infoperiodoaquisitivo->dtinicio,
+                    $this->std->iniafastamento->infoperiodoaquisitivo->dtinicio,
                     true
                 );
                 $this->dom->addChild(
                     $infoPeriodoAquisitivo,
                     "dtFim",
-                    $this->std->infoperiodoaquisitivo->dtfim,
+                    $this->std->iniafastamento->infoperiodoaquisitivo->dtfim,
                     true
                 );
                 $iniAfastamento->appendChild($infoPeriodoAquisitivo);
-            }      
+            }        
             if (! empty($this->std->infocessao)) {
                 $infoCessao = $this->dom->createElement("infoCessao");
                 $this->dom->addChild(
