@@ -143,13 +143,13 @@
             "type": "object",
             "properties": {
                 "origretif": {
-                    "required": true,
+                    "required": false,
                     "type": "integer",
                     "minumum": 1,
                     "maximum": 3
                 },
                 "tpproc": {
-                    "required": true,
+                    "required": false,
                     "type": "integer",
                     "minumum": 1,
                     "maximum": 2
