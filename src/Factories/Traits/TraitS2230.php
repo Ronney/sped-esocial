@@ -332,18 +332,19 @@ trait TraitS2230
                 );
                 $iniAfastamento->appendChild($infoPeriodoAquisitivo);
             }        
-            if (! empty($this->std->infocessao)) {
+            if (! empty($this->std->iniafastamento->infocessao)) {
+
                 $infoCessao = $this->dom->createElement("infoCessao");
                 $this->dom->addChild(
                     $infoCessao,
                     "cnpjCess",
-                    $this->std->infocessao->cnpjcess,
+                    $this->std->iniafastamento->infocessao->cnpjcess,
                     true
                 );
                 $this->dom->addChild(
                     $infoCessao,
                     "infOnus",
-                    $this->std->infocessao->infonus,
+                    $this->std->iniafastamento->infocessao->infonus,
                     true
                 );
                 $iniAfastamento->appendChild($infoCessao);
