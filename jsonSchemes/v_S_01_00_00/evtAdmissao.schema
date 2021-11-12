@@ -77,7 +77,6 @@
             "maxLength": 3,
             "pattern": "^[0-9]{3}$"
         },
-<<<<<<< HEAD
         "nmmae": {
             "required": false,
             "type": ["string","null"],
@@ -88,8 +87,6 @@
             "type": ["string","null"],
             "maxLength": 70
         },
-=======
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         "endereco": {
             "required": true,
             "type": "object",
@@ -368,11 +365,7 @@
                         },
                         "nrproctrab": {
                             "required": false,
-<<<<<<< HEAD
-                            "type": ["string","null"],
-=======
-                            "type": ["string", "null"],
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
+                            "type": ["string", "null"]
                             "maxLength": 20
                         },
                         "tpregjor": {
@@ -476,15 +469,12 @@
                     "required": false,
                     "type": "object",
                     "properties": {
-<<<<<<< HEAD
                         "indprovim": {
                             "required": false,
                             "type": "integer",
                             "minimum": 1,
                             "maximum": 2
                         },
-=======
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
                         "tpprov": {
                             "required": true,
                             "type": "integer",
@@ -503,24 +493,6 @@
                             "maximum": 2
                         },
                         "indtetorgps": {
-<<<<<<< HEAD
-                            "required": false,
-                            "type": "string",
-                            "maxLength": 1
-                        },
-                        "indabonoperm": {
-                            "required": false,
-                            "type": "string",                            
-                            "maxLength": 1
-                        },
-                        "dtiniabono": {
-                            "required": false,
-                            "type": "string",
-                            "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
-                        },
-                        "infodecjud": {
-=======
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
                             "required": false,
                             "type": ["string", "null"],
                             "pattern": "S|N"
@@ -577,7 +549,6 @@
                               "minimum": 101,
                               "maximum": 905
                         },
-<<<<<<< HEAD
                         "codcarreira": {
                               "required": false,
                               "type": ["string","null"],
@@ -608,8 +579,6 @@
                               "type": ["string","null"],
                               "maxLength": 1
                         },
-=======
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
                         "vrsalfx": {
                             "required": false,
                             "type": "number"
@@ -736,12 +705,7 @@
                                     "minimum": 0,
                                     "maximum": 3
                                 },
-<<<<<<< HEAD
-                                "horario": {
-
-=======
                                 "hornoturno": {
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
                                     "required": false,
                                     "type": ["string", "null"],
                                     "pattern": "S|N"

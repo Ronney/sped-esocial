@@ -42,6 +42,8 @@ $std->nmsoc = 'Chiquinho';
 $std->dtnascto = '1980-01-01';
 $std->paisnascto = '105'; // 105 = Brasil
 $std->paisnac = '105';
+$std->nmmae = 'Fulana de Tal';
+$std->nmpai = 'Ciclano de Tal';
 $std->endereco = new \stdClass();
 $std->endereco->brasil = new \stdClass();
 $std->endereco->brasil->tplograd = 'R';
@@ -80,11 +82,7 @@ $std->dependente[0]->tpdep = '01';
 $std->dependente[0]->nmdep = 'WATSON';
 $std->dependente[0]->dtnascto = '2015-01-01';
 $std->dependente[0]->cpfdep = '12345678985';
-<<<<<<< HEAD
 $std->dependente[0]->sexodep = 'M';
-=======
-$std->dependente[0]->sexodep = 'F';
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
 $std->dependente[0]->depirrf = 'N';
 $std->dependente[0]->depsf = 'N';
 $std->dependente[0]->inctrab = 'N';
@@ -97,44 +95,7 @@ $std->vinculo = new \stdClass();
 $std->vinculo->matricula = '1020304050';
 $std->vinculo->tpregtrab = 1;
 $std->vinculo->tpregprev = 1;
-<<<<<<< HEAD
-$std->vinculo->cadini = 'N';
-
-$std->vinculo->infoceletista = new \stdClass();
-$std->vinculo->infoceletista->dtadm = '2017-08-08';
-$std->vinculo->infoceletista->tpadmissao = 1;
-$std->vinculo->infoceletista->indadmissao = 1;
-$std->vinculo->infoceletista->nrproctrab = '11223344556677889900';
-$std->vinculo->infoceletista->tpregjor = 1;
-$std->vinculo->infoceletista->natatividade = 1;
-$std->vinculo->infoceletista->cnpjsindcategprof = '77721644000101';
-$std->vinculo->infoceletista->dtopcfgts = '2017-01-01';
-
-/* 
-
-  $std->vinculo->infoceletista->trabtemporario = new \stdClass();
-  $std->vinculo->infoceletista->trabtemporario->hipleg = 1;
-  $std->vinculo->infoceletista->trabtemporario->justcontr = 'jwkjwkjwkjwk';
-  $std->vinculo->infoceletista->trabtemporario->tpinclcontr = 3;
-
-  $std->vinculo->infoceletista->trabtemporario->idetomadorserv = new \stdClass();
-  $std->vinculo->infoceletista->trabtemporario->idetomadorserv->tpinsc = 2;
-  $std->vinculo->infoceletista->trabtemporario->idetomadorserv->nrinsc = '12345678901234';
-
-  $std->vinculo->infoceletista->trabtemporario->idetomadorserv->ideestabvinc = new \stdClass();
-  $std->vinculo->infoceletista->trabtemporario->idetomadorserv->ideestabvinc->tpinsc = 2;
-  $std->vinculo->infoceletista->trabtemporario->idetomadorserv->ideestabvinc->nrinsc = '12345678901234';
-
-  $std->vinculo->infoceletista->trabtemporario->idetrabsubstituido[0] = new \stdClass();
-  $std->vinculo->infoceletista->trabtemporario->idetrabsubstituido[0]->cpftrabsubst = '12345678901';
-
-  $std->vinculo->infoceletista->aprend = new \stdClass();
-  $std->vinculo->infoceletista->aprend->tpinsc = 1;
-  $std->vinculo->infoceletista->aprend->nrinsc = '12345678901';
- */
-=======
 $std->vinculo->cadini = 'S';
-
 $std->vinculo->infoceletista = new \stdClass();
 $std->vinculo->infoceletista->dtadm = '2017-08-08';
 $std->vinculo->infoceletista->tpadmissao = 1;
@@ -199,7 +160,7 @@ $std->vinculo->infocontrato->dtingrcargo = '2017-02-01';
 $std->vinculo->infocontrato->nmfuncao = 'Melhor função de todas';
 $std->vinculo->infocontrato->cbofuncao = '654321';
 $std->vinculo->infocontrato->acumcargo = 'S';
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
+
 $std->vinculo->infocontrato->codcateg = 101;
 $std->vinculo->infocontrato->vrsalfx = 2547.56;
 $std->vinculo->infocontrato->undsalfixo = 7;
@@ -229,17 +190,11 @@ $std->vinculo->infocontrato->horcontratual->qtdhrssem = 99.50;
 $std->vinculo->infocontrato->horcontratual->tpjornada = 9;
 $std->vinculo->infocontrato->horcontratual->dsctpjorn = 'kjsksjsjs';
 $std->vinculo->infocontrato->horcontratual->tmpparc = 0;
-<<<<<<< HEAD
-
-$std->vinculo->infocontrato->horcontratual->dscjorn[0] = new \stdClass();
-$std->vinculo->infocontrato->horcontratual->dscjorn[0] = 'descricao da jornada de trabalho'
+$std->vinculo->infocontrato->horcontratual->hornoturno = 'N';
+$std->vinculo->infocontrato->horcontratual->dscjorn = 'De 2a a 6a feira, das 8:00 às 12:00 e das 13:00 às 17:00 e no sábado das 8:00 às 12:00';
 
 $std->vinculo->infocontrato->filiacaosindical[0] = new \stdClass();
 $std->vinculo->infocontrato->filiacaosindical[0]->cnpjsindtrab = '12345678901234';
-=======
-$std->vinculo->infocontrato->horcontratual->hornoturno = 'N';
-$std->vinculo->infocontrato->horcontratual->dscjorn = 'De 2a a 6a feira, das 8:00 às 12:00 e das 13:00 às 17:00 e no sábado das 8:00 às 12:00';
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
 
 $std->vinculo->infocontrato->alvarajudicial = new \stdClass();
 $std->vinculo->infocontrato->alvarajudicial->nrprocjud = '12345678901234567890';

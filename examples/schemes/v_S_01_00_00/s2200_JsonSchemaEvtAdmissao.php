@@ -8,20 +8,8 @@ use JsonSchema\Constraints\Factory;
 use JsonSchema\SchemaStorage;
 use JsonSchema\Validator;
 
-<<<<<<< HEAD
-
-//S-2200 
-//Campo {cpfDep} – alterada validação da alínea a). ok
-//Grupo {afastamento} – alterada condição. ok
-//Grupo {desligamento} – alteradas condição e descrição no registro do evento.ok
-//Campo {dtDeslig} – alterada validação. ok
-//Campo {racaCor} – alterada descrição dos valores [2, 3, 4]. ok
-//Campo {dtChegada} – alterada ocorrência e inserida validação. ok
-//Campo {dtTerm} – alterada validação.ok
-=======
 //S-2200 versão inicial e-social simplificado v1.0.0
 
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
 $evento  = 'evtAdmissao';
 $version = 'S_01_00_00';
 
@@ -104,7 +92,6 @@ $jsonSchema = '{
             "maxLength": 3,
             "pattern": "^[0-9]{3}$"
         },
-<<<<<<< HEAD
         "nmmae": {
             "required": false,
             "type": ["string","null"],
@@ -115,8 +102,6 @@ $jsonSchema = '{
             "type": ["string","null"],
             "maxLength": 70
         },
-=======
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         "endereco": {
             "required": true,
             "type": "object",
@@ -302,20 +287,6 @@ $jsonSchema = '{
                         "type": ["string","null"],
                         "maxLength": 11,
                         "minLength": 11
-                    },
-<<<<<<< HEAD
-                    "sexodep": {
-                        "required": false,
-                        "type": ["string","null"],
-                        "maxLength": 1
-                    },
-                    "depirrf": {
-=======
-                    "depsf": {
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
-                        "required": true,
-                        "type": "string",
-                        "pattern": "S|N"
                     },
                     "sexodep": {
                         "required": false,
