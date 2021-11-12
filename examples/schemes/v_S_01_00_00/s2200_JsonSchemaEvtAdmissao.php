@@ -475,6 +475,18 @@ $jsonSchema = '{
                     "required": false,
                     "type": "object",
                     "properties": {
+                        "indprovim": {
+                            "required": false,
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 2
+                        },
+                        "tpprov": {
+                            "required": true,
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 99
+                        },
                         "tpprov": {
                             "required": true,
                             "type": "integer",
