@@ -765,21 +765,13 @@
                                     "minimum": 0,
                                     "maximum": 3
                                 },
-<<<<<<< HEAD
-                                "dscjorn": {
-=======
                                 "horario": {
->>>>>>> parent of a285961... Update do Schema do S2200
+
                                     "required": false,
                                     "type": ["array","null"],
                                     "minItems": 0,
                                     "maxItems": 99,
                                     "items": {
-<<<<<<< HEAD
-                                        "required": true,
-                                        "type": "string",
-                                        "maxLength": 255                                      
-=======
                                         "type": "object",
                                         "properties": {
                                             "dia": {
@@ -794,7 +786,6 @@
                                                 "maxLength": 30
                                             }
                                         }
->>>>>>> parent of a285961... Update do Schema do S2200
                                     }
                                 }
                             }
