@@ -1737,7 +1737,6 @@ trait TraitS2200
                     true
                 );
                 $trabTemporario->appendChild($ideEstabVinc);
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
 
                 //substituido (opcional) ARRAY
                 if (isset($std->trabtemporario->idetrabsubstituido)) {
@@ -1826,8 +1825,7 @@ trait TraitS2200
             $this->dom->addChild(
                 $estatutario,
                 "dtIniAbono",
-<<<<<<< HEAD
-                $std->dtiniabono,
+                ! empty($std->dtiniabono) ? $std->dtiniabono : null,
                 false
             );
             //infoDecJud (opcional)
@@ -1841,11 +1839,6 @@ trait TraitS2200
                 );
                 $estatutario->appendChild($infoDecJud);
             }
-=======
-                ! empty($std->dtiniabono) ? $std->dtiniabono : null,
-                false
-            );
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
             $infoRegimeTrab->appendChild($estatutario);
         }
         $vinculo->appendChild($infoRegimeTrab);
@@ -1855,15 +1848,12 @@ trait TraitS2200
         $std = $vin->infocontrato;
         $this->dom->addChild(
             $contrato,
-<<<<<<< HEAD
             "codCargo",
             ! empty($std->codcargo) ? $std->codcargo : null,
             false
         );
         $this->dom->addChild(
             $contrato,
-=======
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
             "nmCargo",
             ! empty($std->nmcargo) ? $std->nmcargo : null,
             false
@@ -1876,7 +1866,6 @@ trait TraitS2200
         );
         $this->dom->addChild(
             $contrato,
-<<<<<<< HEAD
             "codFuncao",
             ! empty($std->codfuncao) ? $std->codfuncao : null,
             false
@@ -1901,8 +1890,6 @@ trait TraitS2200
         );
         $this->dom->addChild(
             $contrato,
-=======
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
             "dtIngrCargo",
             ! empty($std->dtingrcargo) ? $std->dtingrcargo : null,
             false
