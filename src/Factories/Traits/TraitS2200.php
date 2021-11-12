@@ -1683,7 +1683,6 @@ trait TraitS2200
                     $std->trabtemporario->justcontr,
                     true
                 );
-<<<<<<< HEAD
                 $this->dom->addChild(
                     $trabTemporario,
                     "tpInclContr",
@@ -1722,7 +1721,7 @@ trait TraitS2200
                     $ideTomadorServ->appendChild($ideEstabVinc);
                 }
                 $trabTemporario->appendChild($ideTomadorServ);
-=======
+
                 $ideEstabVinc = $this->dom->createElement("ideEstabVinc");
                 $this->dom->addChild(
                     $ideEstabVinc,
