@@ -1923,13 +1923,13 @@ trait TraitS2200
         $this->dom->addChild(
             $remuneracao,
             "vrSalFx",
-            $std->vrsalfx,
+            ! empty($std->vrsalfx) ? $std->vrsalfx : null,
             true
         );
         $this->dom->addChild(
             $remuneracao,
             "undSalFixo",
-            $std->undsalfixo,
+            ! empty($std->undsalfixo) ? $std->undsalfixo : null,
             true
         );
         $this->dom->addChild(
