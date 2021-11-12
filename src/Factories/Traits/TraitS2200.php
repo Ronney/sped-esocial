@@ -1206,14 +1206,7 @@ trait TraitS2200
      * builder for version S.1.0.0
      */
     protected function toNodeS100()
-<<<<<<< HEAD
-     {  
-
-        //Em desenvolvimento
-
-=======
     {
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         $ideEmpregador = $this->node->getElementsByTagName('ideEmpregador')->item(0);
         $ideEvento = $this->dom->createElement("ideEvento");
         $this->dom->addChild(
@@ -1285,21 +1278,13 @@ trait TraitS2200
             "grauInstr",
             $this->std->grauinstr,
             true
-<<<<<<< HEAD
-        );        
-=======
         );
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         $this->dom->addChild(
             $trabalhador,
             "nmSoc",
             ! empty($this->std->nmsoc) ? $this->std->nmsoc : null,
             false
         );
-<<<<<<< HEAD
-=======
-
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         //nascimento (obrigatorio)
         $nascimento = $this->dom->createElement("nascimento");
         $this->dom->addChild(
@@ -1307,11 +1292,7 @@ trait TraitS2200
             "dtNascto",
             $this->std->dtnascto,
             true
-<<<<<<< HEAD
-        );                
-=======
         );
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         $this->dom->addChild(
             $nascimento,
             "paisNascto",
@@ -1324,7 +1305,6 @@ trait TraitS2200
             $this->std->paisnac,
             true
         );
-<<<<<<< HEAD
         $this->dom->addChild(
             $nascimento,
             "nmMae",
@@ -1337,8 +1317,6 @@ trait TraitS2200
             ! empty($this->std->nmpai) ? $this->std->nmpai : null,
             false
         );
-=======
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         $trabalhador->appendChild($nascimento);
 
         //Endereço (obrigatorio)
@@ -1346,14 +1324,6 @@ trait TraitS2200
         if (isset($this->std->endereco->brasil)) {
             $end = $this->std->endereco->brasil;
             $brasil = $this->dom->createElement("brasil");
-<<<<<<< HEAD
-            $this->dom->addChild(
-                $brasil,
-                "tpLograd",
-                $end->tplograd,
-                true
-            );
-=======
             if (! empty($end->tplograd)) {
                 $this->dom->addChild(
                     $brasil,
@@ -1362,7 +1332,6 @@ trait TraitS2200
                     true
                 );
             }
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
             $this->dom->addChild(
                 $brasil,
                 "dscLograd",
@@ -1381,14 +1350,6 @@ trait TraitS2200
                 ! empty($end->complemento) ? $end->complemento : null,
                 false
             );
-<<<<<<< HEAD
-            $this->dom->addChild(
-                $brasil,
-                "bairro",
-                ! empty($end->bairro) ? $end->bairro : null,
-                true
-            );
-=======
             if (! empty($end->bairro)) {
                 $this->dom->addChild(
                     $brasil,
@@ -1397,7 +1358,6 @@ trait TraitS2200
                     true
                 );
             }
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
             $this->dom->addChild(
                 $brasil,
                 "cep",
@@ -1467,36 +1427,6 @@ trait TraitS2200
         }
         $trabalhador->appendChild($endereco);
 
-<<<<<<< HEAD
-        if (isset($this->std->trabestrangeiro)) {
-            $ex = $this->std->trabestrangeiro;
-            $trabEstrangeiro = $this->dom->createElement("trabEstrangeiro");
-            $this->dom->addChild(
-                $trabEstrangeiro,
-                "dtChegada",
-                $ex->dtchegada,
-                true
-            );
-            $this->dom->addChild(
-                $trabEstrangeiro,
-                "classTrabEstrang",
-                $ex->classtrabestrang,
-                true
-            );
-            $this->dom->addChild(
-                $trabEstrangeiro,
-                "casadoBr",
-                $ex->casadobr,
-                true
-            );
-            $this->dom->addChild(
-                $trabEstrangeiro,
-                "filhosBr",
-                $ex->filhosbr,
-                true
-            );
-            $trabalhador->appendChild($trabEstrangeiro);
-=======
         if (isset($this->std->trabimig)) {
             $ex = $this->std->trabimig;
             $trabImig = $this->dom->createElement("trabImig");
@@ -1513,7 +1443,6 @@ trait TraitS2200
                 true
             );
             $trabalhador->appendChild($trabImig);
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         }
 
         //deficiencia (opcional)
@@ -1601,15 +1530,12 @@ trait TraitS2200
                 );
                 $this->dom->addChild(
                     $dependente,
-<<<<<<< HEAD
-=======
                     "sexoDep",
                     ! empty($dep->sexodep) ? $dep->sexodep : null,
                     false
                 );
                 $this->dom->addChild(
                     $dependente,
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
                     "depIRRF",
                     $dep->depirrf,
                     true
@@ -1629,22 +1555,6 @@ trait TraitS2200
                 $trabalhador->appendChild($dependente);
             }
         }
-
-<<<<<<< HEAD
-        //aposentadoria (opcional)
-        if (isset($this->std->aposentadoria)) {
-            $aposentadoria = $this->dom->createElement("aposentadoria");
-            $this->dom->addChild(
-                $aposentadoria,
-                "trabAposent",
-                $this->std->aposentadoria->trabaposent,
-                true
-            );
-            $trabalhador->appendChild($aposentadoria);
-        }
-
-=======
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         //contato (opcional)
         if (isset($this->std->contato)) {
             $doc = $this->std->contato;
@@ -1666,10 +1576,6 @@ trait TraitS2200
         //encerra trabalhador
         $this->node->appendChild($trabalhador);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         //vinculo (obrigatorio)
         $vinculo = $this->dom->createElement("vinculo");
         $vin = $this->std->vinculo;
@@ -1720,14 +1626,6 @@ trait TraitS2200
                 $std->indadmissao,
                 true
             );
-<<<<<<< HEAD
-            $this->dom->addChild(
-                $celetista,
-                "nrProcTrab",                
-                ! empty($std->nrproctrab) ? $std->nrproctrab : null,
-                false
-            );
-=======
             if (! empty($std->nrproctrab)) {
                 $this->dom->addChild(
                     $celetista,
@@ -1736,7 +1634,6 @@ trait TraitS2200
                     true
                 );
             }
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
             $this->dom->addChild(
                 $celetista,
                 "tpRegJor",
@@ -1761,20 +1658,6 @@ trait TraitS2200
                 $std->cnpjsindcategprof,
                 true
             );
-<<<<<<< HEAD
-            //FGTS (não é mais obrigatorio, verificar condições no layout) 
-            $fgts = $this->dom->createElement("FGTS");
-            $this->dom->addChild(
-                $fgts,
-                "dtOpcFGTS",
-                ! empty($std->dtopcfgts) ? $std->dtopcfgts : null,
-                true
-            );            
-            if($std->dtopcfgts){
-                $celetista->appendChild($fgts);
-            }                  
-=======
-
             //FGTS
             if (! empty($std->dtopcfgts)) {
                 $fgts = $this->dom->createElement("FGTS");
@@ -1786,8 +1669,6 @@ trait TraitS2200
                 );
                 $celetista->appendChild($fgts);
             }
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
-
             if (isset($std->trabtemporario)) {
                 $trabTemporario = $this->dom->createElement("trabTemporario");
                 $this->dom->addChild(
@@ -1896,22 +1777,18 @@ trait TraitS2200
             $estatutario = $this->dom->createElement("infoEstatutario");
             $this->dom->addChild(
                 $estatutario,
-<<<<<<< HEAD
                 "indProvim",
                 $std->indprovim,
                 true
             );
             $this->dom->addChild(
                 $estatutario,
-=======
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
                 "tpProv",
                 $std->tpprov,
                 true
             );
             $this->dom->addChild(
                 $estatutario,
-<<<<<<< HEAD
                 "dtNomeacao",
                 $std->dtnomeacao,
                 true
@@ -1924,8 +1801,6 @@ trait TraitS2200
             );
             $this->dom->addChild(
                 $estatutario,
-=======
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
                 "dtExercicio",
                 $std->dtexercicio,
                 true
@@ -1939,21 +1814,13 @@ trait TraitS2200
             $this->dom->addChild(
                 $estatutario,
                 "indTetoRGPS",
-<<<<<<< HEAD
-                $std->indtetorgps,
-=======
                 ! empty($std->indtetorgps) ? $std->indtetorgps : null,
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
                 false
             );
             $this->dom->addChild(
                 $estatutario,
                 "indAbonoPerm",
-<<<<<<< HEAD
-                $std->indabonoperm,
-=======
                 ! empty($std->indabonoperm) ? $std->indabonoperm : null,
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
                 false
             );
             $this->dom->addChild(
@@ -2058,15 +1925,12 @@ trait TraitS2200
             ! empty($std->acumcargo) ? $std->acumcargo : null,
             false
         );
-<<<<<<< HEAD
-=======
         $this->dom->addChild(
             $contrato,
             "codCateg",
             $std->codcateg,
             true
         );
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         //remuneracao (obrigatorio)
         $remuneracao = $this->dom->createElement("remuneracao");
         $this->dom->addChild(
@@ -2140,17 +2004,10 @@ trait TraitS2200
             );
             $localTrabalho->appendChild($localgeral);
         }
-<<<<<<< HEAD
-        //localTrabDom (opcional)
-        if (isset($std->localtrabdom)) {
-            $ld = $std->localtrabdom;
-            $localDomestico = $this->dom->createElement("localTrabDom");
-=======
         //localTempDom (opcional)
         if (isset($std->localtempdom)) {
             $ld = $std->localtempdom;
             $localDomestico = $this->dom->createElement("localTempDom");
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
             $this->dom->addChild(
                 $localDomestico,
                 "tpLograd",
@@ -2204,11 +2061,7 @@ trait TraitS2200
         $contrato->appendChild($localTrabalho);
 
         //horContratual (opcional)
-<<<<<<< HEAD
-        if (isset($std->horcontratual)) {            
-=======
         if (isset($std->horcontratual)) {
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
             $hc = $std->horcontratual;
             $horContratual = $this->dom->createElement("horContratual");
             $this->dom->addChild(
@@ -2222,44 +2075,13 @@ trait TraitS2200
                 "tpJornada",
                 $hc->tpjornada,
                 true
-<<<<<<< HEAD
-            );           
-=======
             );
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
             $this->dom->addChild(
                 $horContratual,
                 "tmpParc",
                 $hc->tmpparc,
                 true
             );
-<<<<<<< HEAD
-            $this->dom->addChild(
-                $horContratual,
-                "horNoturno",
-                ! empty($hc->hornoturno) ? $hc->hornoturno : 'N',
-                false
-            );            
-            if (isset($hc->dscjorn)) {
-               $dj = $this->dom->createElement("dscJorn",$hc->dscjorn[0]);    
-               $horContratual->appendChild($dj);
-            }                
-            //encerra horContratual
-            $contrato->appendChild($horContratual);            
-        }
-        //filiacaoSindical (opcional) ARRAY
-        if (isset($std->filiacaosindical)) {
-            foreach ($std->filiacaosindical as $sind) {
-                $filiacaoSindical = $this->dom->createElement("filiacaoSindical");
-                $this->dom->addChild(
-                    $filiacaoSindical,
-                    "cnpjSindTrab",
-                    $sind->cnpjsindtrab,
-                    true
-                );
-                $contrato->appendChild($filiacaoSindical);
-            }
-=======
             if (! empty($hc->hornoturno)) {
                 $this->dom->addChild(
                     $horContratual,
@@ -2276,7 +2098,6 @@ trait TraitS2200
             );
             //encerra horContratual
             $contrato->appendChild($horContratual);
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         }
         //alvaraJudicial (opcional)
         if (isset($std->alvarajudicial)) {
@@ -2302,8 +2123,6 @@ trait TraitS2200
                 $contrato->appendChild($observacoes);
             }
         }
-<<<<<<< HEAD
-=======
         //treiCap (opcional)
         if (isset($std->treicap)) {
             foreach ($std->treicap as $trein) {
@@ -2317,7 +2136,6 @@ trait TraitS2200
                 $contrato->appendChild($treiCap);
             }
         }
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         $vinculo->appendChild($contrato);
 
         //sucessaoVinc (opcional)
@@ -2326,24 +2144,14 @@ trait TraitS2200
             $sucessaoVinc = $this->dom->createElement("sucessaoVinc");
             $this->dom->addChild(
                 $sucessaoVinc,
-<<<<<<< HEAD
-                "tpInscAnt",
-                !empty($std->tpinscant) ? $std->tpinscant : null,
-=======
                 "tpInsc",
                 !empty($std->tpinsc) ? $std->tpinsc : null,
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
                 false
             );
             $this->dom->addChild(
                 $sucessaoVinc,
-<<<<<<< HEAD
-                "cnpjEmpregAnt",
-                $std->cnpjempregant,
-=======
                 "nrInsc",
                 $std->nrinsc,
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
                 true
             );
             $this->dom->addChild(
@@ -2390,8 +2198,6 @@ trait TraitS2200
             );
             $vinculo->appendChild($transfDom);
         }
-<<<<<<< HEAD
-=======
         //mudancaCPF (opcional)
         if (isset($vin->mudancacpf)) {
             $std = $vin->mudancacpf;
@@ -2422,8 +2228,6 @@ trait TraitS2200
             );
             $vinculo->appendChild($mudancaCPF);
         }
-
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         //afastamento (opcional)
         if (isset($this->std->vinculo->afastamento)) {
             $std = $this->std->vinculo->afastamento;
@@ -2456,13 +2260,6 @@ trait TraitS2200
             $vinculo->appendChild($desligamento);
         }
 
-<<<<<<< HEAD
-        //encerra vinculo
-        $this->node->appendChild($vinculo);
-        //finalização do xml
-        $this->eSocial->appendChild($this->node);        
-        // $this->xml = $this->dom->saveXML($this->eSocial);        
-=======
         //cessao (opcional)
         if (isset($this->std->vinculo->cessao)) {
             $std = $this->std->vinculo->cessao;
@@ -2481,7 +2278,6 @@ trait TraitS2200
         //finalização do xml
         $this->eSocial->appendChild($this->node);
         //$this->xml = $this->dom->saveXML($this->eSocial);
->>>>>>> fcb4d500bba7f7fcc07247e257a2f819734c9415
         $this->sign();
     }
 }
