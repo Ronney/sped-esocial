@@ -1683,6 +1683,7 @@ trait TraitS2200
                     $std->trabtemporario->justcontr,
                     true
                 );
+
                 $this->dom->addChild(
                     $trabTemporario,
                     "tpInclContr",

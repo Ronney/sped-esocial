@@ -365,7 +365,7 @@
                         },
                         "nrproctrab": {
                             "required": false,
-                            "type": ["string", "null"]
+                            "type": ["string", "null"],
                             "maxLength": 20
                         },
                         "tpregjor": {
