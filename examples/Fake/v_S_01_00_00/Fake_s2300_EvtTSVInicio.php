@@ -31,7 +31,7 @@ $configJson = json_encode($config, JSON_PRETTY_PRINT);
 $std = new \stdClass();
 $std->sequencial = 1;
 $std->indretif = 1;
-$std->nrrecibo = 'ABJBAJBJAJBAÇÇAAKJ';
+//$std->nrrecibo = '11111111111111';
 $std->cpftrab = '12345678901';
 $std->nmtrab = 'Fulano de Tal';
 $std->sexo = 'M';
@@ -40,46 +40,42 @@ $std->estciv = 3;
 $std->grauinstr = '03';
 $std->nmsoc = 'Fulano de Tal';
 $std->dtnascto = '1996-06-11';
-$std->codmunic = '1234567';
-$std->uf = 'AC';
 $std->paisnascto = '105';
 $std->paisnac = '105';
-$std->nmmae = 'Maria de Tal';
-$std->nmpai = "Joao de Tal";
 //documentos
-$std->ctps = new \stdClass();
-$std->ctps->nrctps = '11215454';
-$std->ctps->seriectps = '011';
-$std->ctps->ufctps = 'AC';
+// $std->ctps = new \stdClass();
+// $std->ctps->nrctps = '11215454';
+// $std->ctps->seriectps = '011';
+// $std->ctps->ufctps = 'AC';
 
-$std->ric = new \stdClass();
-$std->ric->nrric = '28282828';
-$std->ric->orgaoemissor = 'sslkjslkjslksj';
-$std->ric->dtexped = '2011-07-07';
+// $std->ric = new \stdClass();
+// $std->ric->nrric = '28282828';
+// $std->ric->orgaoemissor = 'sslkjslkjslksj';
+// $std->ric->dtexped = '2011-07-07';
 
-$std->rg = new \stdClass();
-$std->rg->nrrg = '1234567';
-$std->rg->orgaoemissor = 'sslkslkslks';
-$std->rg->dtexped = '2011-06-06';
+// $std->rg = new \stdClass();
+// $std->rg->nrrg = '1234567';
+// $std->rg->orgaoemissor = 'sslkslkslks';
+// $std->rg->dtexped = '2011-06-06';
 
-$std->rne = new \stdClass();
-$std->rne->nrrne = '8829822982982';
-$std->rne->orgaoemissor = 'slkslsklsklsk';
-$std->rne->dtexped = '2011-08-08';
+// $std->rne = new \stdClass();
+// $std->rne->nrrne = '8829822982982';
+// $std->rne->orgaoemissor = 'slkslsklsklsk';
+// $std->rne->dtexped = '2011-08-08';
 
-$std->oc = new \stdClass();
-$std->oc->nroc = '1929282882828';
-$std->oc->orgaoemissor = 'lslslsls';
-$std->oc->dtexped = '2011-10-10';
-$std->oc->dtvalid = '2022-10-10';
+// $std->oc = new \stdClass();
+// $std->oc->nroc = '1929282882828';
+// $std->oc->orgaoemissor = 'lslslsls';
+// $std->oc->dtexped = '2011-10-10';
+// $std->oc->dtvalid = '2022-10-10';
 
-$std->cnh = new \stdClass();
-$std->cnh->nrregcnh = '123456789012';
-$std->cnh->dtexped = '2017-05-05';
-$std->cnh->ufcnh = 'AC';
-$std->cnh->dtvalid = '2022-05-05';
-$std->cnh->dtprihab = '2011-01-01';
-$std->cnh->categoriacnh = 'AB';
+// $std->cnh = new \stdClass();
+// $std->cnh->nrregcnh = '123456789012';
+// $std->cnh->dtexped = '2017-05-05';
+// $std->cnh->ufcnh = 'AC';
+// $std->cnh->dtvalid = '2022-05-05';
+// $std->cnh->dtprihab = '2011-01-01';
+// $std->cnh->categoriacnh = 'AB';
 
 //endereço
 $std->brasil = new \stdClass();
@@ -101,11 +97,11 @@ $std->exterior->bairro = 'lslslsl';
 $std->exterior->nmcid = 'slkskslks';
 $std->exterior->codpostal = '1234';
 
-$std->trabestrangeiro = new \stdClass();
-$std->trabestrangeiro->dtchegada = '2015-11-11';
-$std->trabestrangeiro->classtrabestrang = 12;
-$std->trabestrangeiro->casadobr = 'N';
-$std->trabestrangeiro->filhosbr = 'N';
+// $std->trabestrangeiro = new \stdClass();
+// $std->trabestrangeiro->dtchegada = '2015-11-11';
+// $std->trabestrangeiro->classtrabestrang = 12;
+// $std->trabestrangeiro->casadobr = 'N';
+// $std->trabestrangeiro->filhosbr = 'N';
 
 $std->infodeficiencia = new \stdClass();
 $std->infodeficiencia->deffisica = 'N';
@@ -127,9 +123,7 @@ $std->dependente[1]->inctrab = 'N';
 
 $std->contato = new \stdClass();
 $std->contato->foneprinc = '1234567890';
-$std->contato->fonealternat = '0912345678';
 $std->contato->emailprinc = 'ele@mail.com';
-$std->contato->emailalternat = 'ela@email.com.br';
 
 $std->infotsvinicio = new \stdClass();
 $std->infotsvinicio->cadini = 'S';

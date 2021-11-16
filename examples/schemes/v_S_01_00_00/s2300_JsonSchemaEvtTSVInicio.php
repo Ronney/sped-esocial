@@ -37,6 +37,7 @@ $jsonSchema = '{
         "nrrecibo": {
             "required": false,
             "type": ["string","null"],
+            "minLength": 3,
             "maxLength": 40
         },
         "nistrab": {
@@ -591,12 +592,6 @@ $jsonSchema = '{
             "required": false,
             "type": ["object","null"],
             "properties": {
-                "opcfgts": {
-                    "required": true,
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 2
-                },
                 "dtopcfgts": {
                     "required": false,
                     "type": ["string","null"],
@@ -911,7 +906,7 @@ $jsonSchema = '{
 $std = new \stdClass();
 $std->sequencial = 1;
 $std->indretif = 1;
-$std->nrrecibo = 'ABJBAJBJAJBAÇÇAAKJ';
+$std->nrrecibo = '123132132131';
 $std->cpftrab = '12345678901';
 $std->nistrab = '1234';
 $std->nmtrab = 'Fulano de Tal';
