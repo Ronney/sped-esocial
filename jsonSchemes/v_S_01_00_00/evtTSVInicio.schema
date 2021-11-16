@@ -593,9 +593,9 @@
                     "type": "string",
                     "pattern": "^[0-9]{1}$"
                 },
-                "cnpjorigem": {
+                "nrinsc": {
                     "required": false,
-                    "type": ["string","null"],
+                    "type": "string",
                     "pattern": "^[0-9]{14}$"
                 },
                 "dtadmorig": {
@@ -608,7 +608,20 @@
                     "type": ["string","null"],
                     "minLength": 1,
                     "maxLength": 30
+                },
+                "tpregtrab": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "minLength": 1,
+                    "maxLength": 1
+                },
+                "tpregprev": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "minLength": 1,
+                    "maxLength": 1
                 }
+
             }
         },
         "infotrabcedido": {
@@ -616,17 +629,17 @@
             "type": ["object","null"],
             "properties": {
                 "categorig": {
-                    "required": true,
+                    "required": false,
                     "type": "string",
                     "pattern": "^[0-9]{3}$"
                 },
                 "cnpjcednt": {
-                    "required": true,
+                    "required": false,
                     "type": "string",
                     "pattern": "^[0-9]{14}$"
                 },
                 "matricced": {
-                    "required": true,
+                    "required": false,
                     "type": "string",
                     "minLength": 1,
                     "maxLength": 30
@@ -637,18 +650,12 @@
                     "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
                 },
                 "tpregtrab": {
-                    "required": true,
+                    "required": false,
                     "type": "integer",
                     "minimum": 1,
                     "maximum": 2
                 },
                 "tpregprev": {
-                    "required": true,
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 3
-                },
-                "infonus": {
                     "required": false,
                     "type": "integer",
                     "minimum": 1,
@@ -669,7 +676,7 @@
                     "type": "string",
                     "pattern": "^[0-9]{1}$"
                 },
-                "tpreg": {
+                "tpregprev": {
                     "required": true,
                     "type": "string",
                     "minLength": 1,
@@ -723,7 +730,7 @@
                             "pattern": "^[0-9]{14}$"
                         },
                         "nmrazao": {
-                            "required": true,
+                            "required": false,
                             "type": "string",
                             "minLength": 3,
                             "maxLength": 100
@@ -771,45 +778,6 @@
                             "required": true,
                             "type": "string",
                             "pattern": "^[0-9]{14}$"
-                        },
-                        "nmrazao": {
-                            "required": true,
-                            "type": "string",
-                            "minLength": 3,
-                            "maxLength": 100
-                        },
-                        "dsclograd": {
-                            "required": true,
-                            "type": "string",
-                            "minLength": 1,
-                            "maxLength": 80
-                        },
-                        "nrlograd": {
-                            "required": true,
-                            "type": "string",
-                            "minLength": 1,
-                            "maxLength": 10
-                        },
-                        "bairro": {
-                            "required": false,
-                            "type": ["string","null"],
-                            "minLength": 1,
-                            "maxLength": 60
-                        },
-                        "cep": {
-                            "required": true,
-                            "type": "string",
-                            "pattern": "^[0-9]{8}$"
-                        },
-                        "codmunic": {
-                            "required": false,
-                            "type": ["string","null"],
-                            "pattern": "^[0-9]{7}$"
-                        },
-                        "uf": {
-                            "required": true,
-                            "type": "string",
-                            "pattern": "^(AC|AL|AP|AM|BA|CE|DF|ES|GO|MA|MT|MS|MG|PA|PB|PR|PE|PI|RJ|RN|RS|RO|RR|SC|SP|SE|TO)$"
                         }
                     }
                 },
@@ -821,12 +789,6 @@
                             "required": true,
                             "type": "string",
                             "pattern": "^[0-9]{11}$"
-                        },
-                        "nmsuperv": {
-                            "required": true,
-                            "type": "string",
-                            "minLength": 3,
-                            "maxLength": 70
                         }
                     }
                 }

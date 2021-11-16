@@ -1674,6 +1674,7 @@ trait TraitS2300
                 $infoComplementares = $this->dom->createElement("infoComplementares");
             }
             $sind = $this->std->infodirigentesindical;
+
             $infoDirigenteSindical = $this->dom->createElement("infoDirigenteSindical");
             $this->dom->addChild(
                 $infoDirigenteSindical,
@@ -1683,8 +1684,14 @@ trait TraitS2300
             );
             $this->dom->addChild(
                 $infoDirigenteSindical,
-                "cnpjOrigem",
-                !empty($sind->cnpjorigem) ? $sind->cnpjorigem : null,
+                "tpInsc",
+                !empty($sind->tpinsc) ? $sind->tpinsc : null,
+                false
+            );
+            $this->dom->addChild(
+                $infoDirigenteSindical,
+                "nrInsc",
+                !empty($sind->nrinsc) ? $sind->nrinsc : null,
                 false
             );
             $this->dom->addChild(
@@ -1699,6 +1706,18 @@ trait TraitS2300
                 !empty($sind->matricorig) ? $sind->matricorig : null,
                 false
             );
+            $this->dom->addChild(
+                $infoDirigenteSindical,
+                "tpRegTrab",
+                !empty($sind->tpregtrab) ? $sind->tpregtrab : null,
+                false
+            );
+            $this->dom->addChild(
+                $infoDirigenteSindical,
+                "tpRegPrev",
+                !empty($sind->tpregprev) ? $sind->tpregprev : null,
+                false
+            );            
             $infoComplementares->appendChild($infoDirigenteSindical);
         }
 
@@ -1716,38 +1735,32 @@ trait TraitS2300
             $this->dom->addChild(
                 $infoTrabCedido,
                 "cnpjCednt",
-                $this->std->infotrabcedido->cnpjcednt,
-                true
+                 !empty($this->std->infotrabcedido->cnpjcednt) ? $this->std->infotrabcedido->cnpjcednt : null,
+                false
             );
             $this->dom->addChild(
                 $infoTrabCedido,
                 "matricCed",
-                $this->std->infotrabcedido->matricced,
-                true
+                !empty($this->std->infotrabcedido->matricced) ? $this->std->infotrabcedido->matricced : null,
+                false
             );
             $this->dom->addChild(
                 $infoTrabCedido,
-                "dtAdmCed",
-                $this->std->infotrabcedido->dtadmced,
-                true
+                "dtAdmCed",                
+                !empty($this->std->infotrabcedido->dtadmced) ? $this->std->infotrabcedido->dtadmced : null,
+                false
             );
             $this->dom->addChild(
                 $infoTrabCedido,
-                "tpRegTrab",
-                $this->std->infotrabcedido->tpregtrab,
-                true
+                "tpRegTrab",                
+                !empty($this->std->infotrabcedido->tpregtrab) ? $this->std->infotrabcedido->tpregtrab : null,
+                false
             );
             $this->dom->addChild(
                 $infoTrabCedido,
                 "tpRegPrev",
-                $this->std->infotrabcedido->tpregprev,
-                true
-            );
-            $this->dom->addChild(
-                $infoTrabCedido,
-                "infOnus",
-                $this->std->infotrabcedido->infonus,
-                true
+                !empty($this->std->infotrabcedido->tpregprev) ? $this->std->infotrabcedido->tpregprev : null,
+                false
             );
             $infoComplementares->appendChild($infoTrabCedido);
         }
@@ -1804,9 +1817,9 @@ trait TraitS2300
             );
             $this->dom->addChild(
                 $instEnsino,
-                "nmRazao",
-                $ens->nmrazao,
-                true
+                "nmRazao",                
+                !empty($ens->nmrazao) ? $ens->nmrazao : null,
+                false
             );
             $this->dom->addChild(
                 $instEnsino,
@@ -1855,48 +1868,7 @@ trait TraitS2300
                     $agt->cnpjagntinteg,
                     true
                 );
-                $this->dom->addChild(
-                    $ageIntegracao,
-                    "nmRazao",
-                    $agt->nmrazao,
-                    true
-                );
-                $this->dom->addChild(
-                    $ageIntegracao,
-                    "dscLograd",
-                    $agt->dsclograd,
-                    true
-                );
-                $this->dom->addChild(
-                    $ageIntegracao,
-                    "nrLograd",
-                    $agt->nrlograd,
-                    true
-                );
-                $this->dom->addChild(
-                    $ageIntegracao,
-                    "bairro",
-                    !empty($agt->bairro) ? $agt->bairro : null,
-                    false
-                );
-                $this->dom->addChild(
-                    $ageIntegracao,
-                    "cep",
-                    $agt->cep,
-                    true
-                );
-                $this->dom->addChild(
-                    $ageIntegracao,
-                    "codMunic",
-                    !empty($agt->codmunic) ? $agt->codmunic : null,
-                    false
-                );
-                $this->dom->addChild(
-                    $ageIntegracao,
-                    "uf",
-                    $agt->uf,
-                    true
-                );
+                
                 $infoEstagiario->appendChild($ageIntegracao);
             }
             if (!empty($est->supervisorestagio)) {
@@ -1906,13 +1878,7 @@ trait TraitS2300
                     "cpfSupervisor",
                     $est->supervisorestagio->cpfsupervisor,
                     true
-                );
-                $this->dom->addChild(
-                    $supervisorEstagio,
-                    "nmSuperv",
-                    $est->supervisorestagio->nmsuperv,
-                    true
-                );
+                );               
                 $infoEstagiario->appendChild($supervisorEstagio);
             }
             $infoComplementares->appendChild($infoEstagiario);

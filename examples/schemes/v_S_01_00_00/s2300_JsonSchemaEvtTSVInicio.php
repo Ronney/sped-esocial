@@ -613,9 +613,9 @@ $jsonSchema = '{
                     "type": "string",
                     "pattern": "^[0-9]{1}$"
                 },
-                "cnpjorigem": {
+                "nrinsc": {
                     "required": false,
-                    "type": ["string","null"],
+                    "type": "string",
                     "pattern": "^[0-9]{14}$"
                 },
                 "dtadmorig": {
@@ -628,7 +628,20 @@ $jsonSchema = '{
                     "type": ["string","null"],
                     "minLength": 1,
                     "maxLength": 30
+                },
+                "tpregtrab": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "minLength": 1,
+                    "maxLength": 1
+                },
+                "tpregprev": {
+                    "required": false,
+                    "type": ["string","null"],
+                    "minLength": 1,
+                    "maxLength": 1
                 }
+
             }
         },
         "infotrabcedido": {
@@ -636,17 +649,17 @@ $jsonSchema = '{
             "type": ["object","null"],
             "properties": {
                 "categorig": {
-                    "required": true,
+                    "required": false,
                     "type": "string",
                     "pattern": "^[0-9]{3}$"
                 },
                 "cnpjcednt": {
-                    "required": true,
+                    "required": false,
                     "type": "string",
                     "pattern": "^[0-9]{14}$"
                 },
                 "matricced": {
-                    "required": true,
+                    "required": false,
                     "type": "string",
                     "minLength": 1,
                     "maxLength": 30
@@ -657,18 +670,12 @@ $jsonSchema = '{
                     "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
                 },
                 "tpregtrab": {
-                    "required": true,
+                    "required": false,
                     "type": "integer",
                     "minimum": 1,
                     "maximum": 2
                 },
                 "tpregprev": {
-                    "required": true,
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 3
-                },
-                "infonus": {
                     "required": false,
                     "type": "integer",
                     "minimum": 1,
@@ -689,7 +696,7 @@ $jsonSchema = '{
                     "type": "string",
                     "pattern": "^[0-9]{1}$"
                 },
-                "tpreg": {
+                "tpregprev": {
                     "required": true,
                     "type": "string",
                     "minLength": 1,
@@ -743,7 +750,7 @@ $jsonSchema = '{
                             "pattern": "^[0-9]{14}$"
                         },
                         "nmrazao": {
-                            "required": true,
+                            "required": false,
                             "type": "string",
                             "minLength": 3,
                             "maxLength": 100
@@ -791,45 +798,6 @@ $jsonSchema = '{
                             "required": true,
                             "type": "string",
                             "pattern": "^[0-9]{14}$"
-                        },
-                        "nmrazao": {
-                            "required": true,
-                            "type": "string",
-                            "minLength": 3,
-                            "maxLength": 100
-                        },
-                        "dsclograd": {
-                            "required": true,
-                            "type": "string",
-                            "minLength": 1,
-                            "maxLength": 80
-                        },
-                        "nrlograd": {
-                            "required": true,
-                            "type": "string",
-                            "minLength": 1,
-                            "maxLength": 10
-                        },
-                        "bairro": {
-                            "required": false,
-                            "type": ["string","null"],
-                            "minLength": 1,
-                            "maxLength": 60
-                        },
-                        "cep": {
-                            "required": true,
-                            "type": "string",
-                            "pattern": "^[0-9]{8}$"
-                        },
-                        "codmunic": {
-                            "required": false,
-                            "type": ["string","null"],
-                            "pattern": "^[0-9]{7}$"
-                        },
-                        "uf": {
-                            "required": true,
-                            "type": "string",
-                            "pattern": "^(AC|AL|AP|AM|BA|CE|DF|ES|GO|MA|MT|MS|MG|PA|PB|PR|PE|PI|RJ|RN|RS|RO|RR|SC|SP|SE|TO)$"
                         }
                     }
                 },
@@ -841,12 +809,6 @@ $jsonSchema = '{
                             "required": true,
                             "type": "string",
                             "pattern": "^[0-9]{11}$"
-                        },
-                        "nmsuperv": {
-                            "required": true,
-                            "type": "string",
-                            "minLength": 3,
-                            "maxLength": 70
                         }
                     }
                 }
@@ -1032,24 +994,25 @@ $std->fgts->dtopcfgts = '2017-05-12';
 
 $std->infodirigentesindical = new \stdClass();
 $std->infodirigentesindical->categorig = '001';
-$std->infodirigentesindical->cnpjorigem = '12345678901234';
+$std->infodirigentesindical->tpinsc = '1';
+$std->infodirigentesindical->nrisc = '1213132';
 $std->infodirigentesindical->dtadmorig = '2017-05-12';
 $std->infodirigentesindical->matricorig = 'ytuytuystyst';
+$std->infodirigentesindical->tpregtrab = '1';
+$std->infodirigentesindical->tpregprev = '1';
 
 $std->infotrabcedido = new \stdClass();
 $std->infotrabcedido->categorig = '001';
 $std->infotrabcedido->cnpjcednt = '12345678901234';
-$std->infotrabcedido->matricced = 'lksçkçslksl';
+$std->infotrabcedido->matricced = '1234';
 $std->infotrabcedido->dtadmced = '2017-05-12';
 $std->infotrabcedido->tpregtrab = 2;
 $std->infotrabcedido->tpregprev = 3;
-$std->infotrabcedido->infonus = 3;
 
 $std->infoestagiario = new \stdClass();
 $std->infoestagiario->natestagio = 'N';
 $std->infoestagiario->nivestagio = 8;
 $std->infoestagiario->areaatuacao = 'ksksksksk';
-$std->infoestagiario->nrapol = 'kak228282828';
 $std->infoestagiario->vlrbolsa = 1200.00;
 $std->infoestagiario->dtprevterm = '2017-12-31';
 
@@ -1079,17 +1042,9 @@ $std->infoestagiario->instensino->uf = 'AC';
 
 $std->infoestagiario->ageintegracao = new \stdClass();
 $std->infoestagiario->ageintegracao->cnpjagntinteg = '12345678901234';
-$std->infoestagiario->ageintegracao->nmrazao = 'mamaamamamam';
-$std->infoestagiario->ageintegracao->dsclograd = 'oaoaoaoao';
-$std->infoestagiario->ageintegracao->nrlograd = 'msmsmsmsms';
-$std->infoestagiario->ageintegracao->bairro = 'lslslslsl';
-$std->infoestagiario->ageintegracao->cep = '12345678';
-$std->infoestagiario->ageintegracao->codmunic = '1234567';
-$std->infoestagiario->ageintegracao->uf = 'AC';
 
 $std->infoestagiario->supervisorestagio = new \stdClass();
 $std->infoestagiario->supervisorestagio->cpfsupervisor = '12345678901';
-$std->infoestagiario->supervisorestagio->nmsuperv = 'lksklskslkslkslk slkslkslkskslk';
 
 $std->mudancacpf = new \stdClass();
 $std->mudancacpf->cpfant = '12345678901';

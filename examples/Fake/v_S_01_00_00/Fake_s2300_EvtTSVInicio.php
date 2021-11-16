@@ -148,26 +148,29 @@ $std->fgts->opcfgts = 1;
 $std->fgts->dtopcfgts = '2017-05-12';
 
 $std->infodirigentesindical = new \stdClass();
+$std->infodirigentesindical->tpinsc = '1';
+$std->infodirigentesindical->nrinsc = '12121212121212';
 $std->infodirigentesindical->categorig = '001';
-$std->infodirigentesindical->cnpjorigem = '12345678901234';
 $std->infodirigentesindical->dtadmorig = '2017-05-12';
 $std->infodirigentesindical->matricorig = 'ytuytuystyst';
+$std->infodirigentesindical->dtadmorig = '2017-05-12';
+$std->infodirigentesindical->tpregtrab = '1';
+$std->infodirigentesindical->tpregprev = '1';
 
 $std->infotrabcedido = new \stdClass();
 $std->infotrabcedido->categorig = '001';
 $std->infotrabcedido->cnpjcednt = '12345678901234';
-$std->infotrabcedido->matricced = 'lksçkçslksl';
+$std->infotrabcedido->matricced = '1234';
 $std->infotrabcedido->dtadmced = '2017-05-12';
-$std->infotrabcedido->tpregtrab = 2;
+$std->infotrabcedido->tpregtrab = '2';
 $std->infotrabcedido->tpregprev = 3;
-$std->infotrabcedido->infonus = 3;
 
 $std->infoestagiario = new \stdClass();
 $std->infoestagiario->natestagio = 'N';
 $std->infoestagiario->nivestagio = 8;
 $std->infoestagiario->areaatuacao = 'ksksksksk';
 $std->infoestagiario->nrapol = 'kak228282828';
-$std->infoestagiario->vlrbolsa = 1200.00;
+//$std->infoestagiario->vlrbolsa = 1200.00;
 $std->infoestagiario->dtprevterm = '2017-12-31';
 
 $std->infoestagiario->instensino = new \stdClass();
@@ -182,13 +185,7 @@ $std->infoestagiario->instensino->uf = 'AC';
 
 $std->infoestagiario->ageintegracao = new \stdClass();
 $std->infoestagiario->ageintegracao->cnpjagntinteg = '12345678901234';
-$std->infoestagiario->ageintegracao->nmrazao = 'mamaamamamam';
-$std->infoestagiario->ageintegracao->dsclograd = 'oaoaoaoao';
-$std->infoestagiario->ageintegracao->nrlograd = 'msmsmsmsms';
-$std->infoestagiario->ageintegracao->bairro = 'lslslslsl';
-$std->infoestagiario->ageintegracao->cep = '12345678';
-$std->infoestagiario->ageintegracao->codmunic = '1234567';
-$std->infoestagiario->ageintegracao->uf = 'AC';
+
 
 //mandato eletivo
 $std->indomandelet = new \stdClass();
