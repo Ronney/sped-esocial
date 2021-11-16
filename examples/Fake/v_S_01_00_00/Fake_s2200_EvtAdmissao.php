@@ -42,8 +42,6 @@ $std->nmsoc = 'Chiquinho';
 $std->dtnascto = '1980-01-01';
 $std->paisnascto = '105'; // 105 = Brasil
 $std->paisnac = '105';
-$std->nmmae = 'Fulana de Tal';
-$std->nmpai = 'Ciclano de Tal';
 $std->endereco = new \stdClass();
 $std->endereco->brasil = new \stdClass();
 $std->endereco->brasil->tplograd = 'R';

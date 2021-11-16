@@ -46,8 +46,6 @@ $std->codmunic = '1234567';
 $std->uf = 'AC';
 $std->paisnascto = '105'; // 105 = Brasil
 $std->paisnac = '105';
-$std->nmmae = 'Fulana de Tal';
-$std->nmpai = 'Ciclano de Tal';
 
 $std->ctps = new \stdClass();
 $std->ctps->nrctps = '12012315';

@@ -92,16 +92,6 @@ $jsonSchema = '{
             "maxLength": 3,
             "pattern": "^[0-9]{3}$"
         },
-        "nmmae": {
-            "required": false,
-            "type": ["string","null"],
-            "maxLength": 70
-        },
-        "nmpai": {
-            "required": false,
-            "type": ["string","null"],
-            "maxLength": 70
-        },
         "endereco": {
             "required": true,
             "type": "object",
@@ -286,12 +276,17 @@ $jsonSchema = '{
                         "required": false,
                         "type": ["string","null"],
                         "maxLength": 11,
-                        "minLength": 11
+                        "minLength": 1
                     },
                     "sexodep": {
                         "required": false,
                         "type": ["string","null"],
                         "pattern": "M|F"
+                    },
+                    "depirrf": {
+                        "required": false,
+                        "type": ["string","null"],
+                        "pattern": "S|N"
                     },
                     "depsf": {
                         "required": true,
@@ -475,24 +470,12 @@ $jsonSchema = '{
                     "required": false,
                     "type": "object",
                     "properties": {
-                        "indprovim": {
-                            "required": false,
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 2
-                        },
                         "tpprov": {
                             "required": true,
                             "type": "integer",
                             "minimum": 1,
                             "maximum": 99
-                        },
-                        "tpprov": {
-                            "required": true,
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 99
-                        },
+                        },                        
                         "dtexercicio": {
                             "required": true,
                             "type": "string",
@@ -522,7 +505,7 @@ $jsonSchema = '{
                     }    
                 },
                 "infocontrato": {
-                    "required": true,
+                    "required": false,
                     "type": "object",
                     "properties": {
                         "nmcargo": {
@@ -556,17 +539,17 @@ $jsonSchema = '{
                               "pattern": "S|N"
                         },
                         "codcateg": {
-                              "required": true,
+                              "required": false,
                               "type": "integer",
                               "minimum": 101,
                               "maximum": 905
                         },
                         "vrsalfx": {
-                            "required": true,
+                            "required": false,
                             "type": "number"
                         },
                         "undsalfixo": {
-                            "required": true,
+                            "required": false,
                             "type": "integer",
                             "minimum": 1,
                             "maximum": 7
@@ -577,7 +560,7 @@ $jsonSchema = '{
                             "maxLength": 255
                         },
                         "tpcontr": {
-                            "required": true,
+                            "required": false,
                             "type": "integer",
                             "minimum": 1,
                             "maximum": 2
