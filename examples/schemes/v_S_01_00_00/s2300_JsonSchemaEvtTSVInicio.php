@@ -1066,7 +1066,7 @@ $std->infoestagiario->nrapol = 'kak228282828';
 $std->infoestagiario->vlrbolsa = 1200.00;
 $std->infoestagiario->dtprevterm = '2017-12-31';
 
-//mand eletivo
+//mandato eletivo
 $std->indomandelet = new \stdClass();
 $std->indomandelet->indremuncargo = 'N';
 $std->indomandelet->tpregtrab = '1';

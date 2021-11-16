@@ -33,7 +33,6 @@ $std->sequencial = 1;
 $std->indretif = 1;
 $std->nrrecibo = 'ABJBAJBJAJBAÇÇAAKJ';
 $std->cpftrab = '12345678901';
-$std->nistrab = '1234';
 $std->nmtrab = 'Fulano de Tal';
 $std->sexo = 'M';
 $std->racacor = 2;
@@ -137,10 +136,13 @@ $std->infotsvinicio->cadini = 'S';
 $std->infotsvinicio->codcateg = '101';
 $std->infotsvinicio->dtinicio = '2017-05-12';
 $std->infotsvinicio->natatividade = 2;
+$std->infotsvinicio->matricula= '12456';
 
 $std->cargofuncao = new \stdClass();
-$std->cargofuncao->codcargo = 'oaoaoa';
-$std->cargofuncao->codfuncao = 'ksksksksk sk';
+$std->cargofuncao->nmcargo = 'cargo';
+$std->cargofuncao->cbocargo = '123456';
+$std->cargofuncao->nmfuncao = 'funcao';
+$std->cargofuncao->cbofuncao = '123456';
 
 $std->remuneracao = new \stdClass();
 $std->remuneracao->vrsalfx = 1200.00;
@@ -193,6 +195,12 @@ $std->infoestagiario->ageintegracao->bairro = 'lslslslsl';
 $std->infoestagiario->ageintegracao->cep = '12345678';
 $std->infoestagiario->ageintegracao->codmunic = '1234567';
 $std->infoestagiario->ageintegracao->uf = 'AC';
+
+//mandato eletivo
+$std->indomandelet = new \stdClass();
+$std->indomandelet->indremuncargo = 'N';
+$std->indomandelet->tpregtrab = '1';
+$std->indomandelet->tpregprev = '1';
 
 $std->infoestagiario->supervisorestagio = new \stdClass();
 $std->infoestagiario->supervisorestagio->cpfsupervisor = '12345678901';
