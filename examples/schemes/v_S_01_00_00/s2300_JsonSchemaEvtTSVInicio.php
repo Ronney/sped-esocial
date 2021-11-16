@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL);
-ini_set('display_errors|On');
+ini_set('display_errors','On');
 require_once '../../../bootstrap.php';
 
 use JsonSchema\Constraints\Constraint;
@@ -16,7 +16,7 @@ use JsonSchema\Validator;
 //Grupos {remuneracao} – alterada condição.
 
 $evento  = 'evtTSVInicio';
-$version = '02_05_00';
+$version = 'S_01_00_00';
 
 $jsonSchema = '{
     "title": "evtTSVInicio",
@@ -39,15 +39,15 @@ $jsonSchema = '{
             "type": ["string","null"],
             "maxLength": 40
         },
-        "cpftrab": {
-            "required": true,
-            "type": "string",
-            "pattern": "^[0-9]{11}$"
-        },
         "nistrab": {
             "required": false,
             "type": ["string","null"],
             "maxLength": 11
+        },        
+        "cpftrab": {
+            "required": true,
+            "type": "string",
+            "pattern": "^[0-9]{11}$"
         },
         "nmtrab": {
             "required": true,
@@ -88,16 +88,6 @@ $jsonSchema = '{
             "type": "string",
             "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
         },
-        "codmunic": {
-            "required": false,
-            "type": ["string","null"],
-            "pattern": "^[0-9]{7}$"
-        },
-        "uf": {
-            "required": false,
-            "type": ["string","null"],
-            "pattern": "^(AC|AL|AP|AM|BA|CE|DF|ES|GO|MA|MT|MS|MG|PA|PB|PR|PE|PI|RJ|RN|RS|RO|RR|SC|SP|SE|TO)$"
-        },
         "paisnascto": {
             "required": true,
             "type": "string",
@@ -107,18 +97,16 @@ $jsonSchema = '{
             "required": true,
             "type": "string",
             "pattern": "^[0-9]{3}$"
-        },
-        "nmmae": {
+        },        
+        "codmunic": {
             "required": false,
             "type": ["string","null"],
-            "minLength": 3,
-            "maxLength": 70
+            "pattern": "^[0-9]{7}$"
         },
-        "nmpai": {
+        "uf": {
             "required": false,
             "type": ["string","null"],
-            "minLength": 3,
-            "maxLength": 70
+            "pattern": "^(AC|AL|AP|AM|BA|CE|DF|ES|GO|MA|MT|MS|MG|PA|PB|PR|PE|PI|RJ|RN|RS|RO|RR|SC|SP|SE|TO)$"
         },
         "ctps": {
             "required": false,
@@ -500,17 +488,7 @@ $jsonSchema = '{
                     "type": ["string","null"],
                     "pattern": "^[0-9]{10,13}$"
                 },
-                "fonealternat": {
-                    "required": false,
-                    "type": ["string","null"],
-                    "pattern": "^[0-9]{10,13}$"
-                },
                 "emailprinc": {
-                    "required": false,
-                    "type": ["string","null"],
-                    "format": "email"
-                },
-                "emailalternat": {
                     "required": false,
                     "type": ["string","null"],
                     "format": "email"
@@ -529,12 +507,25 @@ $jsonSchema = '{
                 "codcateg": {
                     "required": true,
                     "type": "string",
-                    "pattern": "^[0-9]{3}$"
+                    "minLength": 3,
+                    "maxLength": 30
                 },
+                "matricula": {
+                    "required": true,
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 60
+                },                
                 "dtinicio": {
                     "required": true,
                     "type": "string",
                     "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
+                },
+                "nrproctrab": {
+                    "required": false,
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 20
                 },
                 "natatividade": {
                     "required": false,
@@ -548,17 +539,29 @@ $jsonSchema = '{
             "required": false,
             "type": ["object","null"],
             "properties": {
-                "codcargo": {
-                    "required": true,
+                "nmcargo": {
+                    "required": false,
                     "type": "string",
                     "minLength": 1,
-                    "maxLength": 30
+                    "maxLength": 100
                 },
-                "codfuncao": {
+                "cbocargo": {
+                    "required": false,
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 6
+                },
+                "nmfuncao": {
+                    "required": false,
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                },
+                "cbofuncao": {
                     "required": false,
                     "type": ["string","null"],
                     "minLength": 1,
-                    "maxLength": 30
+                    "maxLength": 6
                 }
             }
         },
@@ -567,11 +570,11 @@ $jsonSchema = '{
             "type": ["object","null"],
             "properties": {
                 "vrsalfx": {
-                    "required": true,
+                    "required": false,
                     "type": "number"
                 },
                 "undsalfixo": {
-                    "required": true,
+                    "required": false,
                     "type": "integer",
                     "minimum": 1,
                     "maximum": 7
@@ -609,6 +612,11 @@ $jsonSchema = '{
                     "required": true,
                     "type": "string",
                     "pattern": "^[0-9]{3}$"
+                },
+                "tpinsc": {
+                    "required": false,
+                    "type": "string",
+                    "pattern": "^[0-9]{1}$"
                 },
                 "cnpjorigem": {
                     "required": false,
@@ -666,10 +674,31 @@ $jsonSchema = '{
                     "maximum": 3
                 },
                 "infonus": {
-                    "required": true,
+                    "required": false,
                     "type": "integer",
                     "minimum": 1,
                     "maximum": 3
+                }
+            }
+        }, "infomandelet": {
+            "required": false,
+            "type": ["object","null"],
+            "properties": {
+                "indremuncargo": {
+                    "required": true,
+                    "type": "string",
+                    "pattern": "^(S|N)$"
+                },
+                "tpregtrab": {
+                    "required": true,
+                    "type": "string",
+                    "pattern": "^[0-9]{1}$"
+                },
+                "tpreg": {
+                    "required": true,
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9]{1}$"
                 }
             }
         },
@@ -986,12 +1015,16 @@ $std->contato->emailalternat = 'ela@email.com.br';
 $std->infotsvinicio = new \stdClass();
 $std->infotsvinicio->cadini = 'S';
 $std->infotsvinicio->codcateg = '101';
+$std->infotsvinicio->matricula = '101010';
 $std->infotsvinicio->dtinicio = '2017-05-12';
+$std->infotsvinicio->nrproctrab = '12456';
 $std->infotsvinicio->natatividade = 2;
 
 $std->cargofuncao = new \stdClass();
-$std->cargofuncao->codcargo = 'oaoaoa';
-$std->cargofuncao->codfuncao = 'ksksksksk sk';
+$std->cargofuncao->nmcargo = 'cargo';
+$std->cargofuncao->cbocargo = '12356';
+$std->cargofuncao->nmfuncao = 'funcao';
+$std->cargofuncao->cbofuncao = '123456';
 
 $std->remuneracao = new \stdClass();
 $std->remuneracao->vrsalfx = 1200.00;
@@ -1024,6 +1057,20 @@ $std->infoestagiario->areaatuacao = 'ksksksksk';
 $std->infoestagiario->nrapol = 'kak228282828';
 $std->infoestagiario->vlrbolsa = 1200.00;
 $std->infoestagiario->dtprevterm = '2017-12-31';
+
+$std->infoestagiario = new \stdClass();
+$std->infoestagiario->natestagio = 'N';
+$std->infoestagiario->nivestagio = 8;
+$std->infoestagiario->areaatuacao = 'ksksksksk';
+$std->infoestagiario->nrapol = 'kak228282828';
+$std->infoestagiario->vlrbolsa = 1200.00;
+$std->infoestagiario->dtprevterm = '2017-12-31';
+
+//mand eletivo
+$std->indomandelet = new \stdClass();
+$std->indomandelet->indremuncargo = 'N';
+$std->indomandelet->tpregtrab = '1';
+$std->indomandelet->tpregprev = '1';
 
 $std->infoestagiario->instensino = new \stdClass();
 $std->infoestagiario->instensino->cnpjinstensino = '12345678901234';
@@ -1089,7 +1136,6 @@ $jsonValidator->validate(
     $jsonSchemaObject,
     Constraint::CHECK_MODE_COERCE_TYPES  //tenta converter o dado no tipo indicado no schema
 );
-
 if ($jsonValidator->isValid()) {
     echo "The supplied JSON validates against the schema.<br/>";
 } else {
