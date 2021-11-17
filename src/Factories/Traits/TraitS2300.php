@@ -1352,6 +1352,12 @@ trait TraitS2300
         );
         $this->dom->addChild(
             $infoTSVInicio,
+            "matricula",
+            $ii->matricula,
+            true
+        );
+        $this->dom->addChild(
+            $infoTSVInicio,
             "codCateg",
             $ii->codcateg,
             true
