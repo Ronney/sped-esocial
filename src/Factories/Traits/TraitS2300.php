@@ -1081,19 +1081,7 @@ trait TraitS2300
             "dtNascto",
             $this->std->dtnascto,
             true
-        );
-        $this->dom->addChild(
-            $nascimento,
-            "codMunic",
-            !empty($this->std->codmunic) ? $this->std->codmunic : null,
-            false
-        );
-        $this->dom->addChild(
-            $nascimento,
-            "uf",
-            !empty($this->std->uf) ? $this->std->uf : null,
-            false
-        );
+        );                
         $this->dom->addChild(
             $nascimento,
             "paisNascto",
@@ -1105,19 +1093,7 @@ trait TraitS2300
             "paisNac",
             $this->std->paisnac,
             true
-        );
-        $this->dom->addChild(
-            $nascimento,
-            "nmMae",
-            !empty($this->std->nmmae) ? $this->std->nmmae : null,
-            false
-        );
-        $this->dom->addChild(
-            $nascimento,
-            "nmPai",
-            !empty($this->std->nmpai) ? $this->std->nmpai : null,
-            false
-        );
+        );        
         $trabalhador->appendChild($nascimento);
 
         $documentos = null;
