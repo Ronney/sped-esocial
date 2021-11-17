@@ -1364,6 +1364,12 @@ trait TraitS2300
         );
         $this->dom->addChild(
             $infoTSVInicio,
+            "nrProcTrab",
+            !empty($ii->nrproctrab) ? $ii->nrproctrab : null,
+            false
+        );
+        $this->dom->addChild(
+            $infoTSVInicio,
             "natAtividade",
             !empty($ii->natatividade) ? $ii->natatividade : null,
             false
@@ -1540,6 +1546,31 @@ trait TraitS2300
             $infoComplementares->appendChild($infoTrabCedido);
         }
 
+        if (!empty($this->std->infomandelet)) {
+            if (empty($infoComplementares)) {
+                $infoComplementares = $this->dom->createElement("infoComplementares");
+            }
+            $infoMandElet = $this->dom->createElement("infoMandElet");
+            $this->dom->addChild(
+                $infoMandElet,
+                "indRemunCargo",
+                $this->std->infomandelet->indremuncargo,
+                true
+            );
+            $this->dom->addChild(
+                $infoMandElet,
+                "tpRegTrab",
+                 !empty($this->std->infomandelet->tpregtrab) ? $this->std->infomandelet->tpregtrab : null,
+                false
+            );
+            $this->dom->addChild(
+                $infoMandElet,
+                "tpRegPrev",
+                !empty($this->std->infomandelet->tpregprev) ? $this->std->infomandelet->tpregprev : null,
+                false
+            );
+            $infoComplementares->appendChild($infoMandElet);
+        }
         if (!empty($this->std->infoestagiario)) {
             $est = $this->std->infoestagiario;
             if (empty($infoComplementares)) {

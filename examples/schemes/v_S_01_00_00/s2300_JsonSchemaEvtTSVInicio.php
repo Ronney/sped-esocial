@@ -1007,6 +1007,12 @@ $std->infotrabcedido->dtadmced = '2017-05-12';
 $std->infotrabcedido->tpregtrab = 2;
 $std->infotrabcedido->tpregprev = 3;
 
+
+$std->infomandelet = new \stdClass();
+$std->infomandelet->indremuncargo = 'N';
+$std->infomandelet->tpregtrab = '1';
+$std->infomandelet->tpregprev = '1';
+
 $std->infoestagiario = new \stdClass();
 $std->infoestagiario->natestagio = 'N';
 $std->infoestagiario->nivestagio = 8;
