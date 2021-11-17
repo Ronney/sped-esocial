@@ -1548,22 +1548,10 @@ trait TraitS2300
             );
             $this->dom->addChild(
                 $contato,
-                "foneAlternat",
-                !empty($con->fonealternat) ? $con->fonealternat : null,
-                false
-            );
-            $this->dom->addChild(
-                $contato,
                 "emailPrinc",
                 !empty($con->emailprinc) ? $con->emailprinc : null,
                 false
-            );
-            $this->dom->addChild(
-                $contato,
-                "emailAlternat",
-                !empty($con->emailalternat) ? $con->emailalternat : null,
-                false
-            );
+            );            
             $trabalhador->appendChild($contato);
         }
         $this->node->appendChild($trabalhador);
@@ -1595,6 +1583,7 @@ trait TraitS2300
             false
         );
         $infoComplementares = null;
+
         if (!empty($this->std->cargofuncao)) {
             $infoComplementares = $this->dom->createElement("infoComplementares");
             $rem = $this->std->cargofuncao;

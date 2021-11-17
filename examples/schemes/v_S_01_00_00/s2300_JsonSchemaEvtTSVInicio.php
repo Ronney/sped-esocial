@@ -965,9 +965,7 @@ $std->dependente[1]->inctrab = 'N';
 
 $std->contato = new \stdClass();
 $std->contato->foneprinc = '1234567890';
-$std->contato->fonealternat = '0912345678';
 $std->contato->emailprinc = 'ele@mail.com';
-$std->contato->emailalternat = 'ela@email.com.br';
 
 $std->infotsvinicio = new \stdClass();
 $std->infotsvinicio->cadini = 'S';
