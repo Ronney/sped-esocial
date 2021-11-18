@@ -1682,39 +1682,7 @@ trait TraitS2200
                     "justContr",
                     $std->trabtemporario->justcontr,
                     true
-                );
-                // $ideTomadorServ = $this->dom->createElement("ideTomadorServ");
-                // $this->dom->addChild(
-                //     $ideTomadorServ,
-                //     "tpInsc",
-                //     $std->trabtemporario->idetomadorserv->tpinsc,
-                //     true
-                // );
-                // $this->dom->addChild(
-                //     $ideTomadorServ,
-                //     "nrInsc",
-                //     $std->trabtemporario->idetomadorserv->nrinsc,
-                //     true
-                // );
-
-                // if (isset($std->trabtemporario->ideestabvinc)) {
-                //     $ts = $std->trabtemporario->ideestabvinc;
-                //     $ideEstabVinc = $this->dom->createElement("ideEstabVinc");
-                //     $this->dom->addChild(
-                //         $ideEstabVinc,
-                //         "tpInsc",
-                //         $ts->tpinsc,
-                //         true
-                //     );
-                //     $this->dom->addChild(
-                //         $ideEstabVinc,
-                //         "nrInsc",
-                //         $ts->nrinsc,
-                //         true
-                //     );
-                //     $ideEstabVinc->appendChild($ideEstabVinc);
-                // }
-                // $trabTemporario->appendChild($ideEstabVinc);
+                );            
 
                 $ideEstabVinc = $this->dom->createElement("ideEstabVinc");
                 $this->dom->addChild(
@@ -1887,28 +1855,6 @@ trait TraitS2200
             $std->codcateg,
             true
         );
-       
-        // $this->dom->addChild(
-        //     $contrato,
-        //     "codCateg",
-        //     $std->codcateg,
-        //     true
-        // );
-        // $this->dom->addChild(
-        //     $contrato,
-        //     "codCarreira",
-        //     ! empty($std->codcarreira) ? $std->codcarreira : null,
-        //     false
-        // );
-       
-        // $this->dom->addChild(
-        //     $contrato,
-        //     "CBOFuncao",
-        //     ! empty($std->cbofuncao) ? $std->cbofuncao : null,
-        //     false
-        // );
-        
-       
         //remuneracao (obrigatorio)
         $remuneracao = $this->dom->createElement("remuneracao");
         $this->dom->addChild(

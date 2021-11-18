@@ -135,37 +135,37 @@ $std->vinculo->tpregprev = 1;
 $std->vinculo->nrrecinfprelim = '12345678901234556';
 $std->vinculo->cadini = 'N';
 
-/*
-  $std->vinculo->infoceletista = new \stdClass();
-  $std->vinculo->infoceletista->dtadm = '2017-08-08';
-  $std->vinculo->infoceletista->tpadmissao = 1;
-  $std->vinculo->infoceletista->indadmissao = 1;
-  $std->vinculo->infoceletista->tpregjor = 1;
-  $std->vinculo->infoceletista->natatividade = 1;
-  $std->vinculo->infoceletista->cnpjsindcategprof = '77721644000101';
-  $std->vinculo->infoceletista->opcfgts = 1;
-  $std->vinculo->infoceletista->dtopcfgts = '2017-01-01';
 
-  $std->vinculo->infoceletista->trabtemporario = new \stdClass();
-  $std->vinculo->infoceletista->trabtemporario->hipleg = 1;
-  $std->vinculo->infoceletista->trabtemporario->justcontr = 'jwkjwkjwkjwk';
-  $std->vinculo->infoceletista->trabtemporario->tpinclcontr = 3;
+$std->vinculo->infoceletista = new \stdClass();
+$std->vinculo->infoceletista->dtadm = '2017-08-08';
+$std->vinculo->infoceletista->tpadmissao = 1;
+$std->vinculo->infoceletista->indadmissao = 1;
+$std->vinculo->infoceletista->tpregjor = 1;
+$std->vinculo->infoceletista->natatividade = 1;
+$std->vinculo->infoceletista->cnpjsindcategprof = '77721644000101';
+$std->vinculo->infoceletista->opcfgts = 1;
+$std->vinculo->infoceletista->dtopcfgts = '2017-01-01';
 
-  $std->vinculo->infoceletista->trabtemporario->idetomadorserv = new \stdClass();
-  $std->vinculo->infoceletista->trabtemporario->idetomadorserv->tpinsc = 2;
-  $std->vinculo->infoceletista->trabtemporario->idetomadorserv->nrinsc = '12345678901234';
+$std->vinculo->infoceletista->trabtemporario = new \stdClass();
+$std->vinculo->infoceletista->trabtemporario->hipleg = 1;
+$std->vinculo->infoceletista->trabtemporario->justcontr = 'jwkjwkjwkjwk';
+$std->vinculo->infoceletista->trabtemporario->tpinclcontr = 3;
 
-  $std->vinculo->infoceletista->trabtemporario->idetomadorserv->ideestabvinc = new \stdClass();
-  $std->vinculo->infoceletista->trabtemporario->idetomadorserv->ideestabvinc->tpinsc = 2;
-  $std->vinculo->infoceletista->trabtemporario->idetomadorserv->ideestabvinc->nrinsc = '12345678901234';
+$std->vinculo->infoceletista->trabtemporario->idetomadorserv = new \stdClass();
+$std->vinculo->infoceletista->trabtemporario->idetomadorserv->tpinsc = 2;
+$std->vinculo->infoceletista->trabtemporario->idetomadorserv->nrinsc = '12345678901234';
 
-  $std->vinculo->infoceletista->trabtemporario->idetrabsubstituido[0] = new \stdClass();
-  $std->vinculo->infoceletista->trabtemporario->idetrabsubstituido[0]->cpftrabsubst = '12345678901';
+$std->vinculo->infoceletista->trabtemporario->idetomadorserv->ideestabvinc = new \stdClass();
+$std->vinculo->infoceletista->trabtemporario->idetomadorserv->ideestabvinc->tpinsc = 2;
+$std->vinculo->infoceletista->trabtemporario->idetomadorserv->ideestabvinc->nrinsc = '12345678901234';
 
-  $std->vinculo->infoceletista->aprend = new \stdClass();
-  $std->vinculo->infoceletista->aprend->tpinsc = 1;
-  $std->vinculo->infoceletista->aprend->nrinsc = '12345678901';
- */
+$std->vinculo->infoceletista->trabtemporario->idetrabsubstituido[0] = new \stdClass();
+$std->vinculo->infoceletista->trabtemporario->idetrabsubstituido[0]->cpftrabsubst = '12345678901';
+
+$std->vinculo->infoceletista->aprend = new \stdClass();
+$std->vinculo->infoceletista->aprend->tpinsc = 1;
+$std->vinculo->infoceletista->aprend->nrinsc = '12345678901';
+ 
 $std->vinculo->infoestatutario = new \stdClass();
 $std->vinculo->infoestatutario->indprovim = 1;
 $std->vinculo->infoestatutario->tpprov = 99;
