@@ -1507,6 +1507,7 @@ trait TraitS2300
             );            
             $infoComplementares->appendChild($infoDirigenteSindical);
         }
+        
 
         if (!empty($this->std->infotrabcedido)) {
             if (empty($infoComplementares)) {
