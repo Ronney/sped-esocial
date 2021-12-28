@@ -1857,7 +1857,9 @@ trait TraitS2200
             ! empty($std->dscsalvar) ? $std->dscsalvar : null,
             false
         );
-        $contrato->appendChild($remuneracao);
+        if(@$std->remuneracao){
+            $contrato->appendChild($remuneracao);
+        }
         //duracao (não é obrigatorio)
         $duracao = $this->dom->createElement("duracao");
         $this->dom->addChild(
@@ -1884,7 +1886,9 @@ trait TraitS2200
             ! empty($std->objdet) ? $std->objdet : null,
             false
         );      
-        $contrato->appendChild($duracao);
+        if(@$std->duracao){
+            $contrato->appendChild($duracao);
+        }
         //localTrabalho (obrigatorio)
         $localTrabalho = $this->dom->createElement("localTrabalho");
         //localTrabGeral (opcional)
