@@ -1863,7 +1863,7 @@ trait TraitS2200
         $this->dom->addChild(
             $duracao,
             "tpContr",
-            $std->tpcontr,
+            ! empty(@$std->tpcontr) ? @$std->tpcontr : null,
             false
         );
         $this->dom->addChild(
@@ -1883,7 +1883,7 @@ trait TraitS2200
             "objDet",
             ! empty($std->objdet) ? $std->objdet : null,
             false
-        );
+        );      
         $contrato->appendChild($duracao);
         //localTrabalho (obrigatorio)
         $localTrabalho = $this->dom->createElement("localTrabalho");

@@ -160,13 +160,15 @@ $std->vinculo->infocontrato->cbofuncao = '654321';
 $std->vinculo->infocontrato->acumcargo = 'S';
 
 $std->vinculo->infocontrato->codcateg = 101;
-$std->vinculo->infocontrato->vrsalfx = 2547.56;
-$std->vinculo->infocontrato->undsalfixo = 7;
-$std->vinculo->infocontrato->dscsalvar = 'ksksksksk';
-$std->vinculo->infocontrato->tpcontr = 1;
-$std->vinculo->infocontrato->dtterm = '2018-01-01';
-$std->vinculo->infocontrato->clauassec = 'N';
-$std->vinculo->infocontrato->objdet = 'ksksks';
+$std->vinculo->infocontrato->remuneracao = new \stdClass();
+$std->vinculo->infocontrato->remuneracao->vrsalfx = 2547.56;
+$std->vinculo->infocontrato->remuneracao->undsalfixo = 7;
+$std->vinculo->infocontrato->remuneracao->dscsalvar = 'ksksksksk';
+$std->vinculo->infocontrato->duracao = new \stdClass();
+$std->vinculo->infocontrato->duracao->tpcontr = 1;
+$std->vinculo->infocontrato->duracao->dtterm = '2018-01-01';
+$std->vinculo->infocontrato->duracao->clauassec = 'N';
+$std->vinculo->infocontrato->duracao->objdet = 'ksksks';
 
 $std->vinculo->infocontrato->localtrabgeral = new \stdClass();
 $std->vinculo->infocontrato->localtrabgeral->tpinsc = 1;
