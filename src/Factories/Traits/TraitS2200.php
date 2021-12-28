@@ -884,7 +884,7 @@ trait TraitS2200
             ! empty($std->dtingrcarr) ? $std->dtingrcarr : null,
             false
         );
-        //remuneracao (obrigatorio)
+        //remuneracao não e mais (obrigatorio) em alguns casos
         $remuneracao = $this->dom->createElement("remuneracao");
         $this->dom->addChild(
             $remuneracao,
@@ -905,12 +905,12 @@ trait TraitS2200
             false
         );
         $contrato->appendChild($remuneracao);
-        //duracao (obrigatorio)
+        //duracao não é mais (obrigatorio) em alguns caso
         $duracao = $this->dom->createElement("duracao");
         $this->dom->addChild(
             $duracao,
             "tpContr",
-            $std->tpcontr,
+            ! empty($std->tpcontr) ? $std->tpcontr : null,
             true
         );
         $this->dom->addChild(
@@ -1737,26 +1737,8 @@ trait TraitS2200
             $estatutario = $this->dom->createElement("infoEstatutario");
             $this->dom->addChild(
                 $estatutario,
-                "indProvim",
-                !$std->indprovim,
-                false
-            );
-            $this->dom->addChild(
-                $estatutario,
                 "tpProv",
                 $std->tpprov,
-                true
-            );
-            $this->dom->addChild(
-                $estatutario,
-                "dtNomeacao",
-                $std->dtnomeacao,
-                true
-            );
-            $this->dom->addChild(
-                $estatutario,
-                "dtPosse",
-                $std->dtposse,
                 true
             );
             $this->dom->addChild(
@@ -1855,7 +1837,7 @@ trait TraitS2200
             $std->codcateg,
             true
         );
-        //remuneracao (obrigatorio)
+        //remuneracao (não é obrigatorio)
         $remuneracao = $this->dom->createElement("remuneracao");
         $this->dom->addChild(
             $remuneracao,
@@ -1876,7 +1858,7 @@ trait TraitS2200
             false
         );
         $contrato->appendChild($remuneracao);
-        //duracao (obrigatorio)
+        //duracao (não é obrigatorio)
         $duracao = $this->dom->createElement("duracao");
         $this->dom->addChild(
             $duracao,

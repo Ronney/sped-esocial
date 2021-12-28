@@ -277,8 +277,7 @@ $jsonSchema = '{
 // Schema must be decoded before it can be used for validation
 $jsonSchemaObject = json_decode($jsonSchema);
 
-if (empty($jsonSchemaObject))
-{
+if (empty($jsonSchemaObject)) {
     echo "Erro no JSON SCHEMA";
     die;
 }
@@ -351,7 +350,7 @@ $jsonValidator = new Validator(new Factory($schemaStorage));
 
 // Do validation (use isValid() and getErrors() to check the result)
 $jsonValidator->validate(
-        $std, $jsonSchemaObject
+    $std, $jsonSchemaObject
 );
 
 if ($jsonValidator->isValid()) {

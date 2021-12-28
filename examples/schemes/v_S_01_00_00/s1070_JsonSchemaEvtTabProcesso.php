@@ -202,7 +202,7 @@ $jsonValidator = new Validator(new Factory($schemaStorage));
 
 // Do validation (use isValid() and getErrors() to check the result)
 $jsonValidator->validate(
-        $std, $jsonSchemaObject
+    $std, $jsonSchemaObject
 );
 
 if ($jsonValidator->isValid()) {
