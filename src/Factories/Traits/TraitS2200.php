@@ -1842,19 +1842,19 @@ trait TraitS2200
         $this->dom->addChild(
             $remuneracao,
             "vrSalFx",
-            ! empty($std->vrsalfx) ? $std->vrsalfx : null,
+            ! empty($std->remuneracao->vrsalfx) ? $std->remuneracao->vrsalfx : null,
             false
         );
         $this->dom->addChild(
             $remuneracao,
             "undSalFixo",
-            ! empty($std->undsalfixo) ? $std->undsalfixo : null,
+            ! empty($std->remuneracao->undsalfixo) ? $std->remuneracao->undsalfixo : null,
             false
         );
         $this->dom->addChild(
             $remuneracao,
             "dscSalVar",
-            ! empty($std->dscsalvar) ? $std->dscsalvar : null,
+            ! empty($std->remuneracao->dscsalvar) ? $std->remuneracao->dscsalvar : null,
             false
         );
         if(@$std->remuneracao){
@@ -1865,25 +1865,25 @@ trait TraitS2200
         $this->dom->addChild(
             $duracao,
             "tpContr",
-            ! empty(@$std->tpcontr) ? @$std->tpcontr : null,
+            ! empty(@$std->duracao->tpcontr) ? @$std->duracao->tpcontr : null,
             false
         );
         $this->dom->addChild(
             $duracao,
             "dtTerm",
-            ! empty($std->dtterm) ? $std->dtterm : null,
+            ! empty($std->duracao->dtterm) ? $std->duracao->dtterm : null,
             false
         );
         $this->dom->addChild(
             $duracao,
             "clauAssec",
-            ! empty($std->clauassec) ? $std->clauassec : null,
+            ! empty($std->duracao->clauassec) ? $std->duracao->clauassec : null,
             false
         );
         $this->dom->addChild(
             $duracao,
             "objDet",
-            ! empty($std->objdet) ? $std->objdet : null,
+            ! empty($std->duracao->objdet) ? $std->duracao->objdet : null,
             false
         );      
         if(@$std->duracao){

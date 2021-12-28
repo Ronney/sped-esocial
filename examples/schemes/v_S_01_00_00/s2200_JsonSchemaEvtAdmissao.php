@@ -544,42 +544,54 @@ $jsonSchema = '{
                               "minimum": 101,
                               "maximum": 905
                         },
-                        "vrsalfx": {
+                        "remuneracao": {
                             "required": false,
-                            "type": "number"
+                            "type": ["object","null"],
+                            "properties": {
+                                "vrsalfx": {
+                                    "required": false,
+                                    "type": "number"
+                                },
+                                "undsalfixo": {
+                                    "required": false,
+                                    "type": "integer",
+                                    "minimum": 1,
+                                    "maximum": 7
+                                },
+                                "dscsalvar": {
+                                    "required": false,
+                                    "type": ["string","null"],
+                                    "maxLength": 255
+                                }
+                            }
                         },
-                        "undsalfixo": {
+                        "duracao": {
                             "required": false,
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 7
-                        },
-                        "dscsalvar": {
-                            "required": false,
-                            "type": ["string","null"],
-                            "maxLength": 255
-                        },
-                        "tpcontr": {
-                            "required": false,
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 2
-                        },
-                        "dtterm": {
-                            "required": false,
-                            "type": ["string","null"],
-                            "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
-                        },
-                        "clauassec": {
-                            "required": false,
-                            "type": ["string","null"],
-                            "pattern": "^(S|N)$"
-                        },
-                        "objdet": {
-                            "required": false,
-                            "type": ["string","null"],
-                            "pattern": "^.{1,255}$"
-                        },
+                            "type": ["object","null"],
+                            "properties": {
+                                "tpcontr": {
+                                    "required": false,
+                                    "type": "integer",
+                                    "minimum": 1,
+                                    "maximum": 2
+                                },
+                                "dtterm": {
+                                    "required": false,
+                                    "type": ["string","null"],
+                                    "pattern": "^(19[0-9][0-9]|2[0-9][0-9][0-9])[-/](0?[1-9]|1[0-2])[-/](0?[1-9]|[12][0-9]|3[01])$"
+                                },
+                                "clauassec": {
+                                    "required": false,
+                                    "type": ["string","null"],
+                                    "pattern": "^(S|N)$"
+                                },
+                                "objdet": {
+                                    "required": false,
+                                    "type": ["string","null"],
+                                    "pattern": "^.{1,255}$"
+                                }
+                            }
+                         },
                         "localtrabgeral": {
                             "required": false,
                             "type": ["object","null"],
